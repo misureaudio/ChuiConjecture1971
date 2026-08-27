@@ -1,0 +1,2 @@
+x      direct        AGM-formula
+0.0      6.283089   6.283185

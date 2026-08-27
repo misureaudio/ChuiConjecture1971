@@ -1,0 +1,14 @@
+validation N=2 equispaced: 1.62988231  (gem run: 1.63254888)
+validation N=3 equispaced: 1.80802777  (gem run: 1.80934360)
+validation N=4 equispaced: 1.90937250
+
+N=3 optimizer: min = 1.80538702
+  angles (deg): [  0.         239.41539196 479.88236753]
+  equispaced (same quadrature): 1.80802777
+  excess over equispaced: -2.641e-03 (-0.1461%)
+
+N=4 optimizer: min = 1.90947359
+  angles (deg): [  0.          89.99767622 179.99959609 269.65156067]
+  equispaced (same quadrature): 1.90937250
+  excess over equispaced: 1.011e-04 (0.0053%)
+DONE

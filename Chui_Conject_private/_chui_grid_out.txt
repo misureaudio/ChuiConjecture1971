@@ -1,0 +1,22 @@
+Running validations...
+validation N=2 equispaced: 1.62870573  (gem run: 1.63254888)
+validation N=3 equispaced: 1.80595430  (gem run: 1.80934360)
+
+N=3 grid: 40x40 = 1600 configurations, R=160, T=3072
+Computed in 36.82 seconds.
+grid min = 1.80903458 at angles(deg) [  0. 126. 243.]
+equispaced (same quadrature) = 1.80409726
+excess of grid min over equispaced: 4.937e-03 (0.2737%)
+
+adversarial clump (0, 9deg, 180deg): 2.51277072
+adversarial clump (0, 9deg, 189deg): 2.51291235
+adversarial two close (0, 9deg, 120deg): 2.70176947
+adversarial triple clump (0, 9deg, 18deg): 3.60829753
+adversarial near-equisp (0, 117deg, 234deg): 1.80903458
+
+N=4 grid: 15^3 = 3375 configurations, R=100, T=1024
+Computed in 20.37 seconds.
+grid min = 1.96305090 at angles(deg) [  0.  96. 192. 264.]
+equispaced (same quadrature) = 1.90008938
+excess of grid min over equispaced: 6.296e-02 (3.3136%)
+DONE

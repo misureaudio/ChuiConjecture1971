@@ -1,0 +1,1738 @@
+##### Report GitHub Issue
+
+×
+Title:
+
+Content selection saved. Describe the issue below:
+
+Description:
+Submit without GitHub Submit in GitHub
+arXiv is now an independent nonprofit! [Learn more] ×
+[[arXiv logo] Back to arXiv ]
+[Why HTML?] [ Report Issue] [ Back to Abstract ] [ Download PDF]
+1. [Abstract.]
+2. [1 Introduction]
+3. [2 Main results]
+4. [3 Auxiliary lemmas]
+5. [4 Proofs of Theorems , , , and Proposition ]
+6. [5 Proofs of Theorems  and ]
+7. [6 Proofs of Theorems  and ]
+8. [References]
+[ License: arXiv.org perpetual non-exclusive license ]
+arXiv:2009.01898v1 [math.CV] 03 Sep 2020
+
+# Chui’s conjecture in Bergman spacesThanks: This work was carried out in the framework of the
+# project 19-11-00058 by the Russian Science Foundation.
+
+Evgeny Abakumov, Alexander Borichev, Konstantin Fedorovskiy Address:  Evgeny Abakumov:
+Université Gustave Eiffel, Marne-la-Vallée, France
+evgueni.abakoumov@univ-eiffel.fr
+Alexander Borichev:
+Aix–Marseille University, CNRS, Centrale Marseille, I2M, France
+alexander.borichev@math.cnrs.fr
+Konstantin Fedorovskiy:
+Bauman Moscow State Technical University, Moscow, Russia,
+Saint Petersburg State University, St. Petersburg, Russia
+kfedorovs@yandex.ru
+
+###### Abstract.
+
+We solve Chui’s conjecture on the simplest fractions (i.e., sums of Cauchy kernels with unit
+coefficients) in weighted (Hilbert) Bergman spaces. Namely, for a wide class of weights, we prove
+that for every NN, the simplest fractions with NN poles on the unit circle have minimal norm if and
+only if the poles are equispaced on the circle. We find sharp asymptotics of these norms.
+Furthermore, we describe the closure of the simplest fractions in weighted Bergman spaces, using an
+L2L^{2} version of Thompson’s theorem on dominated approximation by simplest fractions.
+
+## 1. Introduction
+
+The starting point of our research is the following question: How to put NN point charges on the
+unit circle 𝕋\mathbb{T} of the complex plane ℂ\mathbb{C} in order to minimize the average strength
+of the corresponding electrostatic field in the unit disk 𝔻\mathbb{D}, assuming forces inversely
+proportional to the distance? C. K. Chui [] conjectured in 1971 that this average strength is
+minimal when the charges are equispaced on 𝕋\mathbb{T}, and, surprisingly, this very natural and
+elementary conjecture is still open.
+
+This and related questions call for the study of approximation properties of so-called simplest
+fractions.
+
+We mean by a simplest fraction (the term simple partial fraction is also used in the literature) a
+rational function rr in the complex variable zz having the form
+
+────────────────────────────────────────────────────────
+r⁡(z)=∑0≤k<N1z−ak,r(z)=\sum_{0\leq k<N}\frac{1}{z-a_{k}},
+────────────────────────────────────────────────────────
+
+where NN is a positive integer, and aka_{k}, 0≤k<N0\leq k<N, are points in ℂ\mathbb{C}. Note that
+the simplest fraction r⁡(z)r(z) can be represented as the logarithmic derivative of the polynomial
+∏0≤k<N(z−ak)\prod_{0\leq k<N}(z-a_{k}); alternatively, the function r⁡(z)r(z) can be thought of as
+the Cauchy transform of the sum of the Dirac measures of mass one at the points
+a0,…,aN−1a_{0},\ldots,a_{N-1}. Another interpretation of the simplest fraction rr is that the value
+r⁡(z)r(z) represents the complex conjugation of the electrostatic field at the point zz, caused by
+charges placed at the points a0,…,aN−1a_{0},\ldots,a_{N-1}, assuming forces inversely proportional
+to the distance.
+
+The simplest fractions are an interesting and important object in various topics of contemporary
+analysis. One can mention here, for example, that in 2006 J. M. Anderson and V. Eiderman []
+solved a long-standing problem of Macintyre–Fuchs describing the growth of the Hausdorff content of
+the level sets of simplest fractions. For a recent survey of numerous results on simplest fractions
+see [].
+
+G. R. Mac Lane [] initiated in 1949 the study of approximation by polynomials with
+restriction on the location of their zeros. One says that a set EE is a polynomial approximation set
+relative to a domain GG if every zero-free holomorphic function ff on GG can be approximated
+uniformly on compact subsets of GG by polynomials having zeros only on EE. Mac Lane showed that for
+every bounded (simply connected) Jordan domain Ω⊂ℂ\Omega\subset\mathbb{C} with rectifiable boundary,
+∂Ω\partial\Omega is a polynomial approximation set relative to Ω\Omega. Later, M. Thompson
+[], Chui [], and Z. Rubinstein and E. B. Saff [] strengthened this result by
+considering bounded polynomial approximation in the unit disc.
+
+Furthermore, J. Korevaar [] considered Mac Lane’s problem in a more general setting and
+related it to approximation by simplest fractions, which is one of the main objects of consideration
+in the present paper. The main result of Korevaar reads as follows:
+
+###### Korevaar’s theorem.
+
+Let GG be a bounded simply connected domain in ℂ\mathbb{C}, and let E⊂ℂE\subset\mathbb{C} be such
+that E∩G=∅E\cap G=\emptyset. The following four statements are equivalent:
+
+1) The set EE is a polynomial approximation set relative to GG.
+
+2) For every point w∈Ew\in E, the function z↦(z−w)−1z\mapsto(z-w)^{-1} can be approximated locally
+uniformly in GG by polynomials having zeros only on EE.
+
+3) There exists a system of finite families {aN,k:0≤k<N}\{a_{N,k}\colon 0\leq k<N\} of points in EE,
+such that
+
+───────────────────────────────────────────────────────
+∑0≤k<N1z−aN,k→0\sum_{0\leq k<N}\frac{1}{z-a_{N,k}}\to 0
+───────────────────────────────────────────────────────
+
+locally uniformly in GG as N→∞N\to\infty.
+
+4) The set closE\mathop{\rm clos}E separates the plane, and GG belongs to a bounded connected
+component of the set ℂ∖closE\mathbb{C}\setminus\mathop{\rm clos}E.
+
+Thus, the possibility of approximation in the sense of the first assertion of the theorem is
+equivalent to the possibility of approximation of the zero function by simplest fractions with poles
+on EE.
+
+For a given set E⊂ℂE\subset\mathbb{C}, we consider the family of all simplest fractions with poles
+on the set EE:
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+𝒮ℱ(E)={∑0≤k<N1z−aN,k:N≥1,aN,k∈E, 0≤k<N}.\SF(E)=\bigg\{\sum_{0\leq k<N}\frac{1}{z-a_{N,k}}:N\geq   
+1,\,a_{N,k}\in E,\,0\leq k<N\bigg\}.                                                              
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+As a corollary of Korevaar’s theorem, one has the following result about approximation of general
+holomorphic functions (not necessarily zero–free ones) by simplest fractions with restrictions on
+the poles. Let GG be a bounded simply connected domain in ℂ\mathbb{C}, and let KK be a compact
+subset of GG having connected complement. Then the family 𝒮ℱ⁡(∂G)\SF(\partial G) is dense in the
+space A⁡(K)A(K) consisting of all continuous functions on KK which are holomorphic in the interior of
+KK. Notice that Korevaar’s results were recently extended by P. A. Borodin [].
+
+In the beginning of 1970-s, Chui [] considered yet another problem related with the
+approximation by the simplest fractions with poles lying on the unit circle. He was interested in
+the question whether the set 𝒮ℱ=𝒮ℱ⁡(𝕋)\SF=\SF(\mathbb{T}) is dense in the Bergman space A1=A1
+(𝔻)A^{1}=A^{1}(\mathbb{D}) consisting of all functions holomorphic and integrable in 𝔻\mathbb{D},
+and endowed with the usual L1L^{1}-norm (with respect to normalized planar Lebesgue measure m2m_{2}
+on the unit disk, dm2(z)=π−1dxdydm_{2}(z)=\pi^{-1}\,dxdy, z=x+iyz=x+iy).
+
+In connection with this question Chui formulated the following conjecture.
+
+###### Chui’s Conjecture.
+
+For any positive integer NN, and for any family of points {ak}0≤k<N\{a_{k}\}_{0\leq k<N} on the unit
+circle, we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+‖∑0≤k<N1z−ak‖L1(𝔻)≥‖∑0≤k<N1z−e2πik/N‖L1(𝔻).\bigg\|\sum_{0\leq                                     
+k<N}\frac{1}{z-a_{k}}\bigg\|_{L^{1}(\mathbb{D})}\geq\bigg\|\sum_{0\leq k<N}\frac{1}{z-e^{2\pi     
+ik/N}}\bigg\|_{L^{1}(\mathbb{D})}.                                                                
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+For N≥1N\geq 1 we denote
+
+─────────────────────────────────────────────────────────────────────────────
+ΨN(z)=∑0≤k<N1z−e2πik/N.\Psi_{N}(z)=\sum_{0\leq k<N}\frac{1}{z-e^{2\pi ik/N}}.
+─────────────────────────────────────────────────────────────────────────────
+
+It can be easily verified (see []) that
+
+─────┬─────────────────────────────────────────────────
+(1.1)│‖ΨN‖L1(𝔻)≥C\|\Psi_{N}\|_{L^{1}(\mathbb{D})}\geq C
+─────┴─────────────────────────────────────────────────
+
+for some absolute constant C>0C>0. Thus, Chui’s conjecture would imply that the set 𝒮ℱ\SF is not
+dense in A1A^{1}.
+
+The next year after the publication of Chui’s conjecture, D. J. Newman [] proved that the
+set 𝒮ℱ\SF is not dense in A1A^{1}. More precisely, he established that
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+‖∑0≤k<N1z−ak‖L1(𝔻)≥π18\bigg\|\sum_{0\leq                                                          
+k<N}\frac{1}{z-a_{k}}\bigg\|_{L^{1}(\mathbb{D})}\geq\dfrac{\pi}{18}                               
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+for any collection {ak}0≤k<N\{a_{k}\}_{0\leq k<N} of points on the unit circle.
+
+Next, Chui studied in [] approximation by simplest fractions in Jordan domains in the complex
+plane in the Bers spaces, that is, in the weighted L1L^{1}-spaces with weights
+λD2−q\lambda_{D}^{2-q}, 0<q<∞0<q<\infty, where λD\lambda_{D} is the Poincaré metric for the domain
+DD under consideration. It follows from estimate ([1.1]) that the set 𝒮ℱ\SF is not dense in the
+Bers spaces in 𝔻\mathbb{D} for every 1<q≤21<q\leq 2. It is proved in [] that for any Jordan
+domain DD and for every q>2q>2, the simplest fractions with poles on the boundary of DD are dense in
+the respective Bers space in DD. The results of [] were later extended in [].
+
+Despite considerable progress in our knowledge of simplest fractions properties, including
+approximation ones, the original question posed by Chui remains open. In this paper, we resolve a
+version of Chui’s conjecture in the context of weighted Bergman spaces of square integrable
+functions, that is in the Hilbert space setting.
+
+Throughout the paper we use the following notation: for positive AA and BB, A≲BA\lesssim B means
+that there is a positive numerical constant CC such that A≤CBA\leq CB, while A≳BA\gtrsim B means
+that B≲AB\lesssim A, and A≍BA\asymp B means that both A≲BA\lesssim B and B≲AB\lesssim A.
+
+## 2. Main results
+
+Let us recall that for α>−1\alpha>-1 the (standard) weighted Bergman space Aα2=Aα2
+(𝔻)A^{2}_{\alpha}=A^{2}_{\alpha}(\mathbb{D}) consists of all functions ff holomorphic in 𝔻\mathbb{D}
+for which the norm ‖f‖α\|f\|_{\alpha} is finite, where
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+‖f‖α2=(α+1)∫𝔻|f⁡(z)|2(1−|z|2)αdm2                                                                  
+(z).\|f\|^{2}_{\alpha}=(\alpha+1)\int_{\mathbb{D}}|f(z)|^{2}\,(1-|z|^{2})^{\alpha}\,dm_{2}(z).    
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+We refer the reader to the book [] where one can find a thorough exposition of the theory of
+standard weighted Bergman spaces.
+
+More generally, if gg is an integrable positive function on the interval [0,1][0,1], we consider the
+corresponding weighted Bergman space
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+A(g)2={f∈Hol(𝔻):‖f‖(g)2=κg∫𝔻|f⁡(z)|2g(1−|z|2)dm2(z)<∞},A^{2}_{(g)}=\Bigl\{f\in\mathop{\rm          
+Hol}(\mathbb{D}):\|f\|^{2}_{(g)}=\kappa_{g}\int_{\mathbb{D}}|f(z)|^{2}\,g(1-|z|^{2})\,dm_{2}(z)<\i
+nfty\Bigr\},                                                                                      
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+where κg=(∫01g⁡(t)𝑑t)−1\kappa_{g}=(\int_{0}^{1}g(t)\,dt)^{-1} is the normalization constant. It can
+be verified directly that the fractions (z−λ)−1(z-\lambda)^{-1}, λ∈𝕋\lambda\in\mathbb{T}, belong to
+A(g)2A^{2}_{(g)} if and only if
+
+─────┬──────────────────────────────────────────────
+(2.1)│∫0g⁡(s)s𝑑s<∞.\int_{0}\frac{g(s)}{s}\,ds<\infty.
+─────┴──────────────────────────────────────────────
+
+Recall that we denote by 𝒮ℱ\SF the set of all simplest fractions with poles on 𝕋\mathbb{T}. For
+every α>0\alpha>0 we have 𝒮ℱ⊂Aα2\SF\subset A^{2}_{\alpha}, and for every α∈(−1,0]\alpha\in(-1,0] we
+have 𝒮ℱ∩Aα2=∅\SF\cap A^{2}_{\alpha}=\emptyset. So, in what follows we suppose that α>0\alpha>0.
+
+First, we establish an analogue of Chui’s conjecture for a wide class of Bergman weighted spaces,
+namely, we prove that for NN point masses on the unit circle, the norm of the corresponding Cauchy
+transform is the smallest if and only if these point masses are equispaced on 𝕋\mathbb{T}.
+
+###### Theorem 1.
+
+Let g≢0g\not\equiv 0 be a concave non-decreasing function on [0,1][0,1] satisfying ([2.1]) and
+such that g⁡(0)=0g(0)=0. Then for every integer N≥1N\geq 1 and for every family of points
+{ak}0≤k<N\{a_{k}\}_{0\leq k<N} on the unit circle we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+‖∑0≤k<N1z−ak‖(g)≥‖∑0≤k<N1z−e2πik/N‖(g)=‖ΨN‖(g).\bigg\|\sum_{0\leq                                 
+k<N}\frac{1}{z-a_{k}}\bigg\|_{(g)}\geq\bigg\|\sum_{0\leq k<N}\frac{1}{z-e^{2\pi                   
+ik/N}}\bigg\|_{(g)}=\big\|\Psi_{N}\big\|_{(g)}.                                                   
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Furthermore, if {ak}0≤k<N\{a_{k}\}_{0\leq k<N} are points on the unit circle such that
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+‖∑0≤k<N1z−ak‖(g)=‖ΨN‖(g),\bigg\|\sum_{0\leq                                                       
+k<N}\frac{1}{z-a_{k}}\bigg\|_{(g)}=\big\|\Psi_{N}\big\|_{(g)},                                    
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+then the points {ak}0≤k<N\{a_{k}\}_{0\leq k<N} are equispaced on the unit circle.
+
+###### Corollary 2.
+
+For every α∈(0,1]\alpha\in(0,1], for every integer N≥1N\geq 1, and for every family of points
+{ak}0≤k<N\{a_{k}\}_{0\leq k<N} on the unit circle we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+‖∑0≤k<N1z−ak‖α≥‖ΨN‖α.\bigg\|\sum_{0\leq                                                           
+k<N}\frac{1}{z-a_{k}}\bigg\|_{\alpha}\geq\big\|\Psi_{N}\big\|_{\alpha}.                           
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+It is easy to see that the sequence of norms
+
+───────────────────────────────────────────────────────────────────────────────────────────────
+‖ΨN‖α=‖NzN−1zN−1‖α\big\|\Psi_{N}\big\|_{\alpha}=\bigg\|\frac{Nz^{N-1}}{z^{N}-1}\bigg\|_{\alpha}
+───────────────────────────────────────────────────────────────────────────────────────────────
+
+tends to zero as N→∞N\to\infty for 0<α<10<\alpha<1, tends to a positive finite number for
+α=1\alpha=1, and tends to +∞+\infty for α>1\alpha>1. The following result provides with the exact
+asymptotics. As usual, we denote by ζ\zeta and Γ\Gamma the Riemann zeta-function and the Gamma
+function, respectively.
+
+###### Theorem 3.
+
+For every α>0\alpha>0 we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+limN→∞Nα−1‖ΨN‖α2=Γ⁡(α+2)ζ                                                                          
+(α+1)>0.\lim_{N\to\infty}N^{\alpha-1}\|\Psi_{N}\|^{2}_{\alpha}=\Gamma(\alpha+2)\zeta(\alpha+1)>0. 
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+In particular,
+
+──────────────────────────────────────────────────────────────────────
+limN→∞‖ΨN‖1=π3.\lim_{N\to\infty}\|\Psi_{N}\|_{1}=\frac{\pi}{\sqrt{3}}.
+──────────────────────────────────────────────────────────────────────
+
+For general gg, we can obtain weaker asymptotical estimates on the norms ‖ΨN‖(g)\|\Psi_{N}\|_{(g)}.
+
+###### Proposition 4.
+
+Let gg satisfy ([2.1]). Then
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+‖ΨN‖(g)2≍N∫01/Ng⁡(t)dtt+N2∫1/N1(1−t)Ng(t)𝑑t,N→∞.\|\Psi_{N}\|^{2}_{(g)}\asymp                       
+N\int_{0}^{1/N}\frac{g(t)\,dt}{t}+N^{2}\int_{1/N}^{1}(1-t)^{N}g(t)\,dt,\qquad N\to\infty.         
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+###### Corollary 5.
+
+(A) For every c>0c>0 we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────
+exp⁡(−cN)≲‖ΨN‖(g)=o⁡(N1/2),N→∞.\exp(-cN)\lesssim\|\Psi_{N}\|_{(g)}=o(N^{1/2}),\qquad N\to\infty.
+──────────────────────────────────────────────────────────────────────────────────────────────
+
+(B) If g⁡(t)=o⁡(t)g(t)=o(t), t→0t\to 0, then ‖ΨN‖(g)=o⁡(1)\|\Psi_{N}\|_{(g)}=o(1), N→∞N\to\infty.
+
+(C) If q>1q>1 and g⁡(t)=log−q⁡(2/t)g(t)=\log^{-q}(2/t), then
+
+──────────────────────────────────────────────────────────────────────────────────────────
+‖ΨN‖(g)2≍Nlogq−1⁡N,N→∞.\|\Psi_{N}\|^{2}_{(g)}\asymp\frac{N}{\log^{q-1}N},\qquad N\to\infty.
+──────────────────────────────────────────────────────────────────────────────────────────
+
+(D) If q>0q>0 and g⁡(t)=exp⁡(−t−q)g(t)=\exp(-t^{-q}), then
+
+───────────────────────────────────────────────────────────────────────────────────────────
+log⁡(1/‖ΨN‖(g))≍Nq/(q+1),N→∞.\log(1/\|\Psi_{N}\|_{(g)})\asymp N^{q/(q+1)},\qquad N\to\infty.
+───────────────────────────────────────────────────────────────────────────────────────────
+
+We do not know whether the equispaced distribution remains to be optimal for the spaces
+Aα2A^{2}_{\alpha} when α>1\alpha>1. Nevertheless, we show that asymptotically this is true up to a
+constant:
+
+###### Theorem 6.
+
+Let α>1\alpha>1. For some absolute constant C1>0C_{1}>0 and for some number C2(α)>0C_{2}(\alpha)>0,
+we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+αC1N1−α≤minak∈𝕋, 0≤k<N⁡‖∑0≤k<N1z−ak‖α2≤C2(α)N1−α,N≥1.\alpha                                        
+C_{1}N^{1-\alpha}\leq\min_{a_{k}\in\mathbb{T},\,0\leq k<N}\bigg\|\sum_{0\leq                      
+k<N}\frac{1}{z-a_{k}}\bigg\|^{2}_{\alpha}\leq C_{2}(\alpha)N^{1-\alpha},\qquad N\geq 1.           
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Given a weighted Bergman space, it is natural to ask which elements of the space can be approximated
+in norm by the simplest fractions with poles on 𝕋\mathbb{T}. Our next result answers this question.
+It turns out that one can approximate either “everything” or “nothing” depending on gg:
+
+###### Theorem 7.
+
+Let g≢0g\not\equiv 0 satisfy ([2.1]). Then
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+clos𝒮ℱA(g)2={𝒮ℱ,t=O⁡(g⁡(t)),t→0,A(g)2,g⁡(t)=o⁡(t),t→0.\mathop{\rm                                     
+clos}{}_{A^{2}_{(g)}}\SF=\begin{cases}\SF,\qquad t=O(g(t)),\,t\to 0,\\ A^{2}_{(g)},\qquad         
+g(t)=o(t),\,t\to 0.\end{cases}                                                                    
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+In particular, 𝒮ℱ\SF is closed nowhere dense in Aα2A^{2}_{\alpha} when 0<α≤10<\alpha\leq 1 and is
+dense in Aα2A^{2}_{\alpha} when α>1\alpha>1.
+
+In the case α=1\alpha=1 we have a more precise result. Set
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+𝒮ℱN={∑0≤j<N1z−zN,j:zN,j∈𝕋, 0≤j<N}.\SF_{N}=\Bigl\{\sum_{0\leq                                      
+j<N}\frac{1}{z-z_{N,j}}:z_{N,j}\in\mathbb{T},\,0\leq j<N\Bigr\}.                                  
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+The sets 𝒮ℱN\SF_{N} are compact in Aα2A^{2}_{\alpha} for α>0\alpha>0, N≥1N\geq 1.
+
+###### Theorem 8.
+
+For every f∈A12f\in A^{2}_{1}, we have
+
+───────────────────────────────────────────────────────────────────────────────────────────
+limN→∞distA12⁡(f,𝒮ℱN)=π3.\lim_{N\to\infty}\dist_{A^{2}_{1}}(f,\SF_{N})=\frac{\pi}{\sqrt{3}}.
+───────────────────────────────────────────────────────────────────────────────────────────
+
+This result shows, in particular, that the set 𝒮ℱ\SF is a ((π/3)+ε)((\pi/\sqrt{3})+\varepsilon)-net
+in the space A12A^{2}_{1}, for small ε>0\varepsilon>0; considering the functions −ΨN-\Psi_{N} with
+large NN we see that the set 𝒮ℱ\SF is not a ((π/3)−ε)((\pi/\sqrt{3})-\varepsilon)-net in the space
+A12A^{2}_{1}, for small ε>0\varepsilon>0.
+
+In 1967 Thompson [] (answering a question posed by Korevaar in 1965) obtained that for every
+bounded analytic function ff in 𝔻\mathbb{D}, there exist hn∈⋃N≥n𝒮ℱNh_{n}\in\bigcup_{N\geq n}\SF_{N},
+n≥1n\geq 1, converging to ff uniformly on compact subsets of 𝔻\mathbb{D} and such that
+
+───────────────────────────────────────────────────────────────────────────────────
+supn≥1,z∈𝔻(1−|z|)|hn(z)|<∞.\sup_{n\geq 1,\,z\in\mathbb{D}}(1-|z|)|h_{n}(z)|<\infty.
+───────────────────────────────────────────────────────────────────────────────────
+
+His proof used the results and the constructions by Mac Lane in []. Let us formulate a
+somewhat improved version of Thompson’s theorem.
+
+Let H∞=H∞(𝔻)H^{\infty}=H^{\infty}(\mathbb{D}) denote the space of bounded analytic functions in the
+unit disc.
+
+###### Theorem 9.
+
+Let f∈H∞f\in H^{\infty}. For every ε>0\varepsilon>0, for every compact subset KK of 𝔻\mathbb{D}, and
+for every N≥N⁡(f,ε,K)N\geq N(f,\varepsilon,K) there exists h∈𝒮ℱNh\in\SF_{N} such that
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+‖f−h‖L∞(K)≤ε,\displaystyle\|f-h\|_{L^{\infty}(K)}\leq\varepsilon,                                 
+──────────────────────────────────────────────────────────────────────────────────────────────────
+|h⁡(z)|≤11−|z|+C0‖f‖H∞                                                                             
+log⁡e1−|z|,z∈𝔻,\displaystyle|h(z)|\leq\frac{1}{1-|z|}+C_{0}\|f\|_{H^{\infty}}\log\frac{e}{1-|z|},\q
+quad z\in\mathbb{D},                                                                              
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+for some absolute constant C0C_{0}.
+
+To prove Theorems  and  we use an LpL^{p} version of Thompson’s theorem which we will
+formulate below. Whereas the simplest fractions hh constructed in the proof of Theorem  have
+“almost” equispaced poles, our Theorem  shows that the average growth of hh along the
+concentric circles r𝕋r\mathbb{T} is not much faster than that of the corresponding simplest fraction
+ΨN\Psi_{N}.
+
+Given β>0\beta>0, denote
+
+────────────────────────────────────────────────────────────────────────────────────────
+ρ⁡(β)=1+β((1+β)1/(p−1)−1)p−1>0\rho(\beta)=\frac{1+\beta}{((1+\beta)^{1/(p-1)}-1)^{p-1}}>0
+────────────────────────────────────────────────────────────────────────────────────────
+
+for 1<p<∞1<p<\infty and ρ⁡(β)=1\rho(\beta)=1 for p=1p=1, so that, by a simple calculation, we have
+
+──────────────────────────────────────────────────────────────────────────────────────────
+(x+y)p≤(1+β)xp+ρ⁡(β)yp,x,y≥0.(x+y)^{p}\leq(1+\beta)x^{p}+\rho(\beta)y^{p},\qquad x,y\geq 0.
+──────────────────────────────────────────────────────────────────────────────────────────
+
+###### Theorem 10.
+
+Let f∈H∞f\in H^{\infty}, 1≤p<∞1\leq p<\infty. For every ε,β>0\varepsilon,\beta>0, for every compact
+subset KK of 𝔻\mathbb{D}, and for every N≥N⁡(f,ε,K)N\geq N(f,\varepsilon,K) there exists h∈𝒮
+ℱNh\in\SF_{N} such that
+
+───┬─────────────────┬──────────────────────────────────────────┬──────────────────────────────────
+   │‖f−h‖L∞          │≤ε,\displaystyle\leq\varepsilon,          │                                  
+   │(K)\displaystyle\│                                          │                                  
+   │|f-h\|_{L^{\infty│                                          │                                  
+   │}(K)}            │                                          │                                  
+───┼─────────────────┼──────────────────────────────────────────┼──────────────────────────────────
+(2.│                 │∫01|h⁡(e2πisr)|p                           │≤(1+β)∫01|ΨN(e2πisr)|p            
+2) │                 │𝑑s\displaystyle\int_{0}^{1}|h(e^{2\pi     │𝑑s\displaystyle\leq(1+\beta)\int_{
+   │                 │is}r)|^{p}\,ds                            │0}^{1}|\Psi_{N}(e^{2\pi           
+   │                 │                                          │is}r)|^{p}\,ds                    
+───┼─────────────────┼──────────────────────────────────────────┼──────────────────────────────────
+   │                 │+ρ⁡(β)C0p‖f‖H∞plogp                        │                                  
+   │                 │e1−r,0<r<1,\displaystyle\quad+\rho(\beta)C│                                  
+   │                 │^{p}_{0}\|f\|^{p}_{H^{\infty}}\log^{p}\fra│                                  
+   │                 │c{e}{1-r},\qquad 0<r<1,                   │                                  
+───┴─────────────────┴──────────────────────────────────────────┴──────────────────────────────────
+
+for C0C_{0} as in Theorem .
+
+###### Remark 11.
+
+Our estimates on hh in Theorem  improve on those in Theorem . Namely, for
+1<p<∞1<p<\infty and r∈(1−N−1,1)r\in(1-N^{-1},1), Theorem  gives
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+Ir:=∫01|h⁡(e2πisr)|p𝑑s≲N(1−r)1−p,I_{r}:=\int_{0}^{1}|h(e^{2\pi is}r)|^{p}\,ds\lesssim N(1-r)^{1-p},
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+which improves on the estimate Ir≲(1−r)−pI_{r}\lesssim(1-r)^{-p} that we can get from
+Theorem . If 1−r=A/N1-r=A/N for large fixed AA, then Theorem  gives Ir≲Npe−p
+AI_{r}\lesssim N^{p}e^{-pA} while Theorem  gives Ir≲NpA−pI_{r}\lesssim N^{p}A^{-p},
+N→∞N\to\infty.
+
+Our results motivate the following open questions.
+
+###### Question 1.
+
+Does Theorem  hold for larger classes of gg? For instance, for g⁡(t)=tαg(t)=t^{\alpha},
+α>1\alpha>1 ?
+
+###### Question 2.
+
+It would be of interest to have more information about the mutual location of the sets 𝒮ℱn\SF_{n} in
+the spaces Aα2A^{2}_{\alpha}. In particular, are pairwise distances between these sets bounded away
+from 00 in the space A12A^{2}_{1} ? Our conjecture is that the answer is positive, and, moreover, if
+α>0\alpha>0, n,k≥1n,k\geq 1, then
+
+───────────────────────────────────────────────────────────────────────────────────────────
+distAα2⁡(𝒮ℱn,𝒮ℱn+k)=‖Ψk‖α.\dist_{A^{2}_{\alpha}}(\SF_{n},\SF_{n+k})=\|\Psi_{k}\|_{\alpha}\,.
+───────────────────────────────────────────────────────────────────────────────────────────
+
+We finish this section with a few words about the organization of the paper and the methods used.
+
+Theorems , , and  and Proposition  are proved in Section . The
+proof of Theorem  uses some classical results on trigonometric series and a convexity
+argument, which is discussed in Section . The proofs of Theorem  and
+Proposition  are direct calculations. In the proof of Theorem  we use moment estimates
+for systems of unimodular numbers going back to J. W. S. Cassels.
+
+In Section  we establish Theorems  and  generalizing Thompson’s theorem. Using
+the ideas of [] and [], we provide a short argument with better pointwise and
+integral estimates.
+
+Theorems  and  are proved in Section . Their proofs use Theorem . In
+Remark  we indicate an alternative way to get the density of 𝒮ℱ\SF in Aα2A^{2}_{\alpha},
+α>1\alpha>1.
+
+## 3. Auxiliary lemmas
+
+Let gg be a function satisfying the conditions of Theorem . For integer k≥0k\geq 0 we set
+
+───────────────────────────────────────────────────────────────
+c(g),k=∫01tkg(1−t)𝑑t>0,c_{(g),k}=\int_{0}^{1}t^{k}g(1-t)\,dt>0,
+───────────────────────────────────────────────────────────────
+
+and define the function
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+φ(g)(t)=∑k≥0c(g),kcos⁡((k+1)t),t∈ℝ.\varphi_{(g)}(t)=\sum_{k\geq 0}c_{(g),k}\cos((k+1)t),\qquad     
+t\in\mathbb{R}.                                                                                   
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Notice that condition ([2.1]) is equivalent to the fact that φ(g)(0)<∞\varphi_{(g)}(0)<\infty.
+
+Next, for every α>0\alpha>0, let gα(t)=tαg_{\alpha}(t)=t^{\alpha}, t≥0t\geq 0,
+cα,k=c(gα),kc_{\alpha,k}=c_{(g_{\alpha}),k}, and φα=φgα\varphi_{\alpha}=\varphi_{g_{\alpha}}, so
+that
+
+───────────────────────────────────────────────────────────────────────────────────────
+cα,k=∫01tk(1−t)α𝑑t,k≥0c_{\alpha,k}=\int_{0}^{1}t^{k}\,(1-t)^{\alpha}\,dt,\qquad k\geq 0
+───────────────────────────────────────────────────────────────────────────────────────
+
+and
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+φα(t)=∑k≥0cα,kcos⁡((k+1)t),t∈ℝ.\varphi_{\alpha}(t)=\sum_{k\geq 0}c_{\alpha,k}\cos((k+1)t),\qquad   
+t\in\mathbb{R}.                                                                                   
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Notice that for α>0\alpha>0 we have
+
+──────────────────────────────────────────────────────────────────────
+cα,k≍k−(α+1),k→∞.c_{\alpha,k}\asymp k^{-(\alpha+1)},\qquad k\to\infty.
+──────────────────────────────────────────────────────────────────────
+
+Both φ(g)\varphi_{(g)} (for the aforesaid gg) and φα\varphi_{\alpha} (for α>0\alpha>0) are 2
+π2\pi-periodic even continuous functions.
+
+We need the following convexity lemma.
+
+###### Lemma 12.
+
+(1) For every function gg satisfying the conditions of Theorem , the function
+φ(g)\varphi_{(g)} is strictly convex on (0,2π)(0,2\pi).
+
+(2) The function φα\varphi_{\alpha}, α>0\alpha>0, is strictly convex on (0,2π)(0,2\pi) if and only
+if α∈(0,1]\alpha\in(0,1].
+
+###### Proof.
+
+(A) First we prove that the function φ=φ1\varphi=\varphi_{1} is strictly convex. We have
+
+─────────────────────────────────────────────────────────────────
+c1,k=1(k+1)(k+2),k≥0,c_{1,k}=\frac{1}{(k+1)(k+2)},\qquad k\geq 0,
+─────────────────────────────────────────────────────────────────
+
+and, hence,
+
+────────────────────────────────────────────────────────────────────────
+φ⁡(t)=∑k≥1cos⁡(kt)k⁡(k+1).\varphi(t)=\sum_{k\geq 1}\frac{\cos(kt)}{k(k+1)}.
+────────────────────────────────────────────────────────────────────────
+
+Therefore, for every t∈(0,2π)t\in(0,2\pi) we obtain
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+φ′(t)=−∑k≥1sin⁡(kt)k+1=−∑k≥1sin⁡(kt)k+1+∑k≥1sin⁡(kt)k−π−t2=∑k≥1sin⁡(k                                 
+t)k⁡(k+1)−π−t2,\varphi^{\prime}(t)=-\sum_{k\geq 1}\frac{\sin(kt)}{k+1}=-\sum_{k\geq                
+1}\frac{\sin(kt)}{k+1}+\sum_{k\geq 1}\frac{\sin(kt)}{k}-\frac{\pi-t}{2}\\ =\sum_{k\geq            
+1}\frac{\sin(kt)}{k(k+1)}-\frac{\pi-t}{2},                                                        
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+and, hence,
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+φ′′(t)=12+∑k≥1cos⁡(kt)k+1.\varphi^{\prime\prime}(t)=\frac{1}{2}+\sum_{k\geq 1}\frac{\cos(kt)}{k+1}.
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Now we are going to use the following result from the book by N. Bari [, Chapter 1,
+Section 30]. Let {ak}k≥0\{a_{k}\}_{k\geq 0} be a decreasing convex sequence of positive numbers,
+limk→∞ak=0\lim_{k\to\infty}a_{k}=0. Then (a0/2)+∑k≥1akcos⁡(kt)≥0(a_{0}/2)+\sum_{k\geq
+1}a_{k}{\cos(kt)}\geq 0, t∈(0,2π)t\in(0,2\pi), because
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+a02+∑k≥1akcos⁡(kt)=12∑j≥0(j+1)Δ2ajFj+1(t),t∈(0,2π),\frac{a_{0}}{2}+\sum_{k\geq                     
+1}a_{k}{\cos(kt)}=\frac{1}{2}\sum_{j\geq 0}(j+1)\Delta^{2}a_{j}F_{j+1}(t),\qquad t\in(0,2\pi),    
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+where Δ2aj=Δaj−Δaj+1\Delta^{2}a_{j}=\Delta a_{j}-\Delta a_{j+1}, Δaj=aj−aj+1\Delta
+a_{j}=a_{j}-a_{j+1}, j≥0j\geq 0, and FjF_{j} are the Fejér kernels,
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+Fj(t)=1j(sin⁡(j                                                                                    
+t/2)sin⁡(t/2))2≥0,j≥1.F_{j}(t)=\frac{1}{j}\Bigl(\frac{\sin(jt/2)}{\sin(t/2)}\Bigr)^{2}\geq 0,\qquad
+j\geq 1.                                                                                          
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+In our situation, ak=1/(k+1)a_{k}=1/(k+1), Δ2ak>0\Delta^{2}a_{k}>0, k≥0k\geq 0, and, hence, we have
+φ′′(t)>0\varphi^{\prime\prime}(t)>0 on (0,2π)(0,2\pi).
+
+(B) Let gg be a function satisfying the conditions of Theorem . Then we have
+
+─────────────────────────┬────────────────────────────────────────────────────────────────────────
+φ(g)                     │=∑k≥0cos⁡((k+1)t)∫01skg(1−s)𝑑s\displaystyle=\sum_{k\geq                  
+(t)\displaystyle\varphi_{│0}\cos((k+1)t)\int_{0}^{1}s^{k}\,g(1-s)\,ds                             
+(g)}(t)                  │                                                                        
+─────────────────────────┼────────────────────────────────────────────────────────────────────────
+                         │=Re⁡eit∫01∑k≥0eitkskg(1−s)                                               
+                         │𝑑s\displaystyle=\xRe\,e^{it}\,\int_{0}^{1}\sum_{k\geq                   
+                         │0}e^{itk}\,s^{k}\,g(1-s)\,ds                                            
+─────────────────────────┼────────────────────────────────────────────────────────────────────────
+                         │=Re∫011e−i                                                              
+                         │t−sg(1−s)ds\displaystyle=\xRe{\int_{0}^{1}\frac{1}{e^{-it}-s}\,g(1-s)\,d
+                         │s}                                                                      
+─────────────────────────┼────────────────────────────────────────────────────────────────────────
+                         │=∫01cos⁡t−s1+s2−2scos⁡tg(1−s)                                             
+                         │𝑑s.\displaystyle=\int_{0}^{1}\frac{\cos{t}-s}{1+s^{2}-2s\cos{t}}\,g(1-s)
+                         │\,ds.                                                                   
+─────────────────────────┴────────────────────────────────────────────────────────────────────────
+
+Hence, φ(g)∈C∞((0,2π))\varphi_{(g)}\in C^{\infty}((0,2\pi)).
+
+Furthermore,
+
+───────────────────────┬──────────────────────────────────────────────────────────────────────────
+φ(g)                   │=∫01cos⁡t−s1+s2−2scos⁡tg(1−s)                                               
+(t)\displaystyle\varphi│𝑑s\displaystyle=\int_{0}^{1}\frac{\cos{t}-s}{1+s^{2}-2s\cos{t}}\,g(1-s)\,d
+_{(g)}(t)              │s                                                                         
+───────────────────────┼──────────────────────────────────────────────────────────────────────────
+                       │=−12∫01g(1−s)dlog(1+s2−2scost)\displaystyle=-\frac{1}{2}\int_{0}^{1}g(1-s)
+                       │\,d\log(1+s^{2}-2s\cos{t})                                                
+───────────────────────┼──────────────────────────────────────────────────────────────────────────
+                       │=−12∫01log(1+s2−2scost)g′(1−s)ds,\displaystyle=-\frac{1}{2}\int_{0}^{1}\lo
+                       │g(1+s^{2}-2s\cos{t})\,g^{\prime}(1-s)\,ds,                                
+───────────────────────┴──────────────────────────────────────────────────────────────────────────
+
+for 0<t<2π0<t<2\pi. Hence,
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+φ(g)′(t)=−∫01ssin⁡t1+s2−2s                                                                         
+cos⁡tg′(1−s)ds,0<t<2π,\varphi_{(g)}^{\prime}(t)=-\int_{0}^{1}\frac{s\sin{t}}{1+s^{2}-2s\cos{t}}\,g^
+{\prime}(1-s)\,ds,\qquad 0<t<2\pi,                                                                
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+and
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+φ(g)′′(t)=−∫01scos⁡t⁡(1+s2−2scos⁡t)−2s2sin2⁡t(1+s2−2scos⁡t)2g′(1−s)ds=∫01s2s−(1+s2)cos⁡t(1+s2−2s        
+cos⁡t)2g′(1−s)ds,0<t<2π.\varphi_{(g)}^{\prime\prime}(t)=-\int_{0}^{1}\frac{s\cos{t}(1+s^{2}-2s\cos{
+t})-2s^{2}\sin^{2}{t}}{(1+s^{2}-2s\cos{t})^{2}}\,g^{\prime}(1-s)\,ds\\                            
+=\int_{0}^{1}s\frac{2s-(1+s^{2})\cos{t}}{(1+s^{2}-2s\cos{t})^{2}}\,g^{\prime}(1-s)\,ds,\qquad     
+0<t<2\pi.                                                                                         
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Thus, φ(g)\varphi_{(g)} is strictly convex on [π2,π]\big[\frac{\pi}{2},\pi\big]. Next, let us
+observe that φ(g)′′(t)=φ(g)′′(2
+π−t)\varphi_{(g)}^{\prime\prime}(t)=\varphi_{(g)}^{\prime\prime}(2\pi-t) on (0,2π)(0,2\pi). Hence,
+φ(g)\varphi_{(g)} is strictly convex on [π2,3π2]\big[\frac{\pi}{2},\frac{3\pi}{2}\big].
+
+Since the function φ1\varphi_{1} is strictly convex on (0,2π)(0,2\pi), we obtain that
+
+────────────────────────────────────────
+∫01ht(s)𝑑s>0,\int_{0}^{1}h_{t}(s)\,ds>0,
+────────────────────────────────────────
+
+for 0<t<π20<t<\dfrac{\pi}{2}, where
+
+─────────────────────────────────────────────────────────────────────────────────────────────────
+ht(s)=s2s−(1+s2)cos⁡t(1+s2−2scos⁡t)2.h_{t}(s)=s\frac{2s-(1+s^{2})\cos{t}}{(1+s^{2}-2s\cos{t})^{2}}.
+─────────────────────────────────────────────────────────────────────────────────────────────────
+
+Take now t∈(0,π2)t\in\big(0,\frac{\pi}{2}\big) and choose (the unique) st∈(0,1)s_{t}\in(0,1) such
+that 2st=(1+st2)cos⁡t2s_{t}=(1+s_{t}^{2})\cos{t}. Then ht(s)<0h_{t}(s)<0 for s∈(0,st)s\in(0,s_{t})
+and ht(s)>0h_{t}(s)>0 for s∈(st,1)s\in(s_{t},1). Furthermore,
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+φ(g)′′(t)=∫01ht(s)g′(1−s)𝑑s≥∫0stht(s)g′(1−st)ds+∫st1ht(s)g′(1−st)ds=g′(1−st)∫01ht(s)              
+ds≥0.\varphi_{(g)}^{\prime\prime}(t)=\int_{0}^{1}h_{t}(s)\,g^{\prime}(1-s)\,ds\\                  
+\geq\int_{0}^{s_{t}}h_{t}(s)\,g^{\prime}(1-s_{t})\,ds+\int_{s_{t}}^{1}h_{t}(s)\,g^{\prime}(1-s_{t}
+)\,ds=\\ g^{\prime}(1-s_{t})\int_{0}^{1}h_{t}(s)\,ds\geq 0.                                       
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Suppose now that φ(g)′′(t)=0\varphi_{(g)}^{\prime\prime}(t)=0. Then g′(1−st)=0g^{\prime}(1-s_{t})=0,
+and, hence, g′=0g^{\prime}=0 on the interval [1−st,1][1-s_{t},1], and φ(g)′′(t)=∫st1ht(s)g′(1−s)
+𝑑s>0\varphi_{(g)}^{\prime\prime}(t)=\int_{s_{t}}^{1}h_{t}(s)\,g^{\prime}(1-s)\,ds>0, which is
+impossible. Therefore, the function φ(g)\varphi_{(g)} is strictly convex on (0,π2)(0,\frac{\pi}{2}).
+Using once again that φ(g)′′(t)=φ(g)′′(2
+π−t)\varphi_{(g)}^{\prime\prime}(t)=\varphi_{(g)}^{\prime\prime}(2\pi-t), we conclude that
+φ(g)\varphi_{(g)} is strictly convex on (0,2π)(0,2\pi).
+
+(C) By the result of (B), the function φα\varphi_{\alpha} is strictly convex on (0,2π)(0,2\pi) for
+α∈(0,1]\alpha\in(0,1].
+
+(D) It remains to notice that for any α>1\alpha>1 the function φα\varphi_{\alpha} is not convex.
+Indeed, for such α\alpha we have φα∈C1(ℝ)\varphi_{\alpha}\in C^{1}(\mathbb{R}), and, since
+φα\varphi_{\alpha} attains its maximum at the point t=0t=0, this function cannot be convex on (0,2
+π)(0,2\pi). The lemma is proved. ∎
+
+The next lemma pertains to the convex analysis.
+
+###### Lemma 13.
+
+Let φ\varphi be a 2π2\pi-periodic even continuous function strictly convex on (0,2π)(0,2\pi). Then
+for every N≥2N\geq 2 we have
+
+───┬──────────────────────────────────────────────────────────────────────────────────────────────
+(3.│infϑj∈[0,2π), 0≤j<N∑0≤j,k<N,j≠kφ⁡(ϑj−ϑk)=∑0≤j,k<N,j≠kφ⁡(2πjN−2π                                 
+1) │kN).\inf_{\vartheta_{j}\in[0,2\pi),\,0\leq j<N}\sum_{0\leq j,k<N,\,j\neq                      
+   │k}\varphi(\vartheta_{j}-\vartheta_{k})=\sum_{0\leq j,k<N,\,j\neq k}\varphi\big(\tfrac{2\pi    
+   │j}{N}-\tfrac{2\pi k}{N}\big).                                                                 
+───┴──────────────────────────────────────────────────────────────────────────────────────────────
+
+Furthermore, if ϑj∈[0,2π)\vartheta_{j}\in[0,2\pi), 0≤j<N0\leq j<N, and
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∑0≤j,k<N,j≠kφ⁡(ϑj−ϑk)=∑0≤j,k<N,j≠kφ⁡(2πjN−2πkN),\sum_{0\leq j,k<N,\,j\neq                           
+k}\varphi(\vartheta_{j}-\vartheta_{k})=\sum_{0\leq j,k<N,\,j\neq k}\varphi\big(\tfrac{2\pi        
+j}{N}-\tfrac{2\pi k}{N}\big),                                                                     
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+then the points eiϑje^{i\vartheta_{j}} are equispaced on the unit circle.
+
+###### Proof.
+
+Changing, if necessary, the enumeration of ϑj\vartheta_{j}, we can assume that the infimum in
+([3.1]) is taken over 0≤ϑ0≤ϑ1≤…≤ϑN−1≤2
+π0\leq\vartheta_{0}\leq\vartheta_{1}\leq\ldots\leq\vartheta_{N-1}\leq 2\pi. Furthermore, set ϑk+j
+N=ϑk+2πj\vartheta_{k+jN}=\vartheta_{k}+2\pi j, 0≤k<N0\leq k<N, j∈ℤj\in\mathbb{Z}. Since
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∑0≤j,k<N,j≠kφ⁡(ϑj−ϑk)=∑1≤s<N∑0≤j<Nφ⁡(ϑj+s−ϑj),\sum_{0\leq j,k<N,\,j\neq                             
+k}\varphi(\vartheta_{j}-\vartheta_{k})=\sum_{1\leq s<N}\sum_{0\leq                                
+j<N}\varphi(\vartheta_{j+s}-\vartheta_{j}),                                                       
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+it suffices to verify that for every 1≤s<N1\leq s<N
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∑0≤j<Nφ⁡(ϑj+s−ϑj)≥Nφ(2πsN),\sum_{0\leq j<N}\varphi(\vartheta_{j+s}-\vartheta_{j})\geq              
+N\varphi\big(\tfrac{2\pi s}{N}\big),                                                              
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+and that the equality is attained only if the differences ϑj+s−ϑj\vartheta_{j+s}-\vartheta_{j} do
+not depend on jj.
+
+Fix 1≤s<N1\leq s<N and set n=gcd⁡(N,s)n=\gcd(N,s), m=N/nm=N/n. It remains to prove
+
+───┬──────────────────────────────────────────────────────────────────────────────────────────────
+(3.│∑0≤p<mφ⁡(ϑj+(p+1)s−ϑj+ps)≥mφ(2πsN),0≤j<n,\sum_{0\leq                                           
+2) │p<m}\varphi(\vartheta_{j+(p+1)s}-\vartheta_{j+ps})\geq m\varphi\big(\tfrac{2\pi               
+   │s}{N}\big),\qquad 0\leq j<n,                                                                  
+───┴──────────────────────────────────────────────────────────────────────────────────────────────
+
+and
+
+───┬──────────────────────────────────────────────────────────────────────────────────────────────
+(3.│{the equality in ([3.2]) is attained only if ϑj+(p+1)s−ϑj+ps=2π                           
+3) │sN, 0≤j<n, 0≤p<m.\left\{\begin{gathered}\text{the equality in \eqref{d3q} is attained only    
+   │if}\\ \text{\,$\vartheta_{j+(p+1)s}-\vartheta_{j+ps}=\tfrac{2\pi s}{N}$, $0\leq j<n$, $0\leq  
+   │p<m$}.\end{gathered}\right.                                                                   
+───┴──────────────────────────────────────────────────────────────────────────────────────────────
+
+Denote ℓ=s/n\ell=s/n. We have 1≤ℓ<m1\leq\ell<m. Let
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+𝒳ℓ={x=(x0,…,xm−1)∈[0,2π]m:∑0≤q<mxq=2π                                                             
+ℓ}.\mathcal{X}_{\ell}=\Bigl\{x=(x_{0},\ldots,x_{m-1})\in[0,2\pi]^{m}:\sum_{0\leq                  
+q<m}x_{q}=2\pi\ell\Bigr\}.                                                                        
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Now, to get ([3.2]) and ([3.3]) we need only to establish the inequality
+
+───┬──────────────────────────────────────────────────────────────────────────────────────────────
+(3.│∑0≤q<mφ⁡(xq)≥mφ(2πℓm),x∈𝒳ℓ,\sum_{0\leq q<m}\varphi(x_{q})\geq                                  
+4) │m\varphi\big(\tfrac{2\pi\ell}{m}\big),\qquad x\in\mathcal{X}_{\ell},                          
+───┴──────────────────────────────────────────────────────────────────────────────────────────────
+
+and the property
+
+───┬──────────────────────────────────────────────────────────────────────────────────────────────
+(3.│∑0≤q<mφ⁡(xq)=mφ(2πℓm)⇔x=(2πℓm,2πℓm,…,2πℓm),x∈𝒳ℓ.\sum_{0\leq                                    
+5) │q<m}\varphi(x_{q})=m\varphi\big(\tfrac{2\pi\ell}{m}\big)\iff                                  
+   │x=(\tfrac{2\pi\ell}{m},\tfrac{2\pi\ell}{m},\ldots,\tfrac{2\pi\ell}{m}),\quad                  
+   │x\in\mathcal{X}_{\ell}.                                                                       
+───┴──────────────────────────────────────────────────────────────────────────────────────────────
+
+By a compactness argument, we can find y=(y0,…,ym−1)∈𝒳ℓy=(y_{0},\ldots,y_{m-1})\in\mathcal{X}_{\ell}
+such that
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∑0≤q<mφ⁡(yq)=min⁡∑0≤q<mx∈𝒳ℓ⁡φ⁡(xq).\sum_{0\leq                                                        
+q<m}\varphi(y_{q})=\min_{x\in\mathcal{X}_{\ell}}\sum_{0\leq q<m}\varphi(x_{q}).                   
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+If yq≠yq+1y_{q}\not=y_{q+1} for some qq, then we can replace yqy_{q} and yq+1y_{q+1} by
+(yq+yq+1)/2(y_{q}+y_{q+1})/2, and, by the strict convexity of φ\varphi, the sum of the values of
+φ\varphi will decay, which is impossible. Hence, yq=2πℓ/my_{q}=2\pi\ell/m, 0≤q<m0\leq q<m, which
+proves ([3.4]) and ([3.5]), and concludes the proof of the lemma. ∎
+
+## 4. Proofs of Theorems , , , and Proposition 
+
+###### Proof of Theorem .
+
+Let N≥1N\geq 1, ϑk∈[0,2π]\vartheta_{k}\in[0,2\pi], 0≤k<N0\leq k<N,
+
+─────────────────────────────────────────────────────────────────────────────────────────────────
+f⁡(z)=∑0≤k<N1z−eiϑk,z∈𝔻.f(z)=\sum_{0\leq k<N}\frac{1}{z-e^{i\vartheta_{k}}},\qquad z\in\mathbb{D}.
+─────────────────────────────────────────────────────────────────────────────────────────────────
+
+Denote by ∥⋅∥\|\cdot\| the norm and by ⟨⋅,⋅⟩\langle\cdot,\cdot\rangle the scalar product in the
+space A(g)2A^{2}_{(g)}. If ϑ=ϑ2−ϑ1\vartheta=\vartheta_{2}-\vartheta_{1}, then
+
+─────────────────────────────────────────────────────────────────────────────────────────────────
+Re⁡⟨1z−eiϑ1,1z−ei                                                                                 
+ϑ2⟩\displaystyle\xRe\bigg\langle\frac{1}{z-e^{i\vartheta_{1}}},\frac{1}{z-e^{i\vartheta_{2}}}\big
+g\rangle                                                                                         
+─────────────────────────────────────────────────────────────────────────────────────────────────
+=κgRe∫𝔻(∑k≥0e−i⁡(k+1)ϑ1zk)⋅(∑j≥0e−i⁡(j+1)ϑ2zj¯)⋅g⁡(1−|z|2)dm2                                       
+(z)\displaystyle=\kappa_{g}\xRe\int_{\mathbb{D}}\bigg(\sum_{k\geq                                
+0}e^{-i(k+1)\vartheta_{1}}z^{k}\bigg)\cdot\bigg(\overline{\sum_{j\geq                            
+0}e^{-i(j+1)\vartheta_{2}}z^{j}}\bigg)\cdot g(1-|z|^{2})\,dm_{2}(z)                              
+─────────────────────────────────────────────────────────────────────────────────────────────────
+=κgRe∫𝔻∑k≥0|z|2keiϑ(k+1)g(1−|z|2)dm2(z)\displaystyle=\kappa_{g}\xRe\int_{\mathbb{D}}\sum_{k\geq  
+0}|z|^{2k}e^{i\vartheta(k+1)}g(1-|z|^{2})\,dm_{2}(z)                                             
+─────────────────────────────────────────────────────────────────────────────────────────────────
+=2κgRe∫01∑k≥0r2keiϑ(k+1)g(1−r2)r𝑑r\displaystyle=2\kappa_{g}\xRe\int_{0}^{1}\sum_{k\geq           
+0}r^{2k}e^{i\vartheta(k+1)}g(1-r^{2})\,r\,dr                                                     
+─────────────────────────────────────────────────────────────────────────────────────────────────
+=κgRe∑k≥0eiϑ(k+1)∫01tkg(1−t)𝑑t\displaystyle=\kappa_{g}\xRe\displaystyle\sum_{k\geq               
+0}e^{i\vartheta(k+1)}\displaystyle\int_{0}^{1}t^{k}g(1-t)\,dt                                    
+─────────────────────────────────────────────────────────────────────────────────────────────────
+=κg∑k≥0c(g),kcos⁡((k+1)ϑ)=κgφ(g)(ϑ).\displaystyle=\kappa_{g}\sum_{k\geq                           
+0}c_{(g),k}\cos((k+1)\vartheta)=\kappa_{g}\varphi_{(g)}(\vartheta).                              
+─────────────────────────────────────────────────────────────────────────────────────────────────
+
+Therefore,
+
+───────────┬──────────────────────────────────────────────────────────────────────────────────────
+‖f‖2\displa│=⟨∑0≤k<N1z−eiϑk,∑0≤k<N1z−eiϑj⟩\displaystyle=\bigg\langle\sum_{0\leq                   
+ystyle\|f\|│k<N}\frac{1}{z-e^{i\vartheta_{k}}},\sum_{0\leq                                        
+^{2}       │k<N}\frac{1}{z-e^{i\vartheta_{j}}}\bigg\rangle                                        
+───────────┼──────────────────────────────────────────────────────────────────────────────────────
+           │=∑0≤k<N‖1z−eiϑk‖2+κg∑0≤j,k<N,j≠kφ(g)(ϑk−ϑj)\displaystyle=\sum_{0\leq                  
+           │k<N}\Bigl\|\frac{1}{z-e^{i\vartheta_{k}}}\Bigr\|^{2}+\kappa_{g}\sum_{0\leq            
+           │j,k<N,\,j\neq k}\varphi_{(g)}(\vartheta_{k}-\vartheta_{j})                            
+───────────┼──────────────────────────────────────────────────────────────────────────────────────
+           │=N‖1z−1‖2+κg∑0≤j,k<N,j≠kφ(g)                                                          
+           │(ϑk−ϑj).\displaystyle=N\Bigl\|\frac{1}{z-1}\Bigr\|^{2}+\kappa_{g}\sum_{0\leq          
+           │j,k<N,\,j\neq k}\varphi_{(g)}(\vartheta_{k}-\vartheta_{j}).                           
+───────────┴──────────────────────────────────────────────────────────────────────────────────────
+
+By Lemma , the function φ(g)\varphi_{(g)} is strictly convex on (0,2π)(0,2\pi), and by
+Lemma , the quantity ‖f‖\|f\| attains its minimum if and only if the points ei
+ϑke^{i\vartheta_{k}}, 0≤k<N0\leq k<N, are equispaced on the unit circle, and, hence,
+‖f‖=‖ΨN‖\|f\|=\|\Psi_{N}\|. ∎
+
+###### Proof of Theorem .
+
+Given N≥1N\geq 1, we have
+
+──────────────────┬───────────────────────────────────────────────────────────────────────────────
+‖ΨN‖α2\displaystyl│=(α+1)∫𝔻|NzN−11−zN|2(1−|z|2)αdm2                                               
+e\|\Psi_{N}\|_{\al│(z)\displaystyle=(\alpha+1)\int_{\mathbb{D}}\bigg|\frac{Nz^{N-1}}{1-z^{N}}\bigg
+pha}^{2}          │|^{2}(1-|z|^{2})^{\alpha}\,dm_{2}(z)                                           
+──────────────────┼───────────────────────────────────────────────────────────────────────────────
+                  │=α+1π∫01(∫02πdt|1−rNeiNt|2)(NrN−1)2(1−r2)αr                                    
+                  │𝑑r.\displaystyle=\frac{\alpha+1}{\pi}\int_{0}^{1}\biggl(\int_{0}^{2\pi}\frac{dt
+                  │}{|1-r^{N}e^{iNt}|^{2}}\biggr)(Nr^{N-1})^{2}(1-r^{2})^{\alpha}r\,dr.           
+──────────────────┴───────────────────────────────────────────────────────────────────────────────
+
+By a direct computation one verifies that
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∫02πdt|1−xeit|2=2π1−x2,0≤x<1.\int_{0}^{2\pi}\frac{dt}{|1-xe^{it}|^{2}}=\frac{2\pi}{1-x^{2}},\qquad
+0\leq x<1.                                                                                        
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Therefore,
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+‖ΨN‖α2=2(α+1)∫01N2r2N−2(1−r2)αr1−r2N                                                              
+𝑑r\|\Psi_{N}\|_{\alpha}^{2}=2(\alpha+1)\int_{0}^{1}\frac{N^{2}r^{2N-2}(1-r^{2})^{\alpha}r}{1-r^{2N
+}}\,dr                                                                                            
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Using the substitution r=e−s/(2N)r=e^{-s/(2N)}, we obtain
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+Nα−1‖ΨN‖α2=(α+1)∫0+∞(N(1−e−s/N))αes−1                                                             
+𝑑s.N^{\alpha-1}\|\Psi_{N}\|_{\alpha}^{2}=(\alpha+1)\int_{0}^{+\infty}\frac{\bigl(N(1-e^{-s/N})\big
+r)^{\alpha}}{e^{s}-1}\,ds.                                                                        
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Since 1−e−x≤x1-e^{-x}\leq x for x≥0x\geq 0, by the Lebesgue dominated convergence theorem we
+conclude that
+
+─────────────────────────────────────────┬────────────────────────────────────────────────────────
+limN→∞Nα−1                               │=(α+1)∫0+∞sαes−1                                        
+‖ΨN‖α2\displaystyle\lim_{N\to\infty}N^{\a│𝑑s\displaystyle=(\alpha+1)\int_{0}^{+\infty}\frac{s^{\al
+lpha-1}\|\Psi_{N}\|^{2}_{\alpha}         │pha}}{e^{s}-1}\,ds                                      
+─────────────────────────────────────────┼────────────────────────────────────────────────────────
+                                         │=(α+1)∑k≥1∫0+∞sαe−ks                                    
+                                         │𝑑s\displaystyle=(\alpha+1)\sum_{k\geq                   
+                                         │1}\int_{0}^{+\infty}s^{\alpha}e^{-ks}\,ds               
+─────────────────────────────────────────┼────────────────────────────────────────────────────────
+                                         │=(α+1)∑k≥1k−α−1∫0+∞sαe−s                                
+                                         │𝑑s\displaystyle=(\alpha+1)\sum_{k\geq                   
+                                         │1}k^{-\alpha-1}\int_{0}^{+\infty}s^{\alpha}e^{-s}\,ds   
+─────────────────────────────────────────┼────────────────────────────────────────────────────────
+                                         │=Γ⁡(α+2)ζ                                                
+                                         │(α+1).\displaystyle=\Gamma(\alpha+2)\zeta(\alpha+1).    
+─────────────────────────────────────────┴────────────────────────────────────────────────────────
+
+∎
+
+###### Remark 14.
+
+The same calculation shows that for every α>0\alpha>0, the sequence {Nα−1
+‖ΨN‖α2}N≥1\{N^{\alpha-1}\|\Psi_{N}\|_{\alpha}^{2}\}_{N\geq 1} is monotonically increasing.
+
+###### Proof of Proposition .
+
+As in the proof of Theorem , we have
+
+─────────────┬────────────────────────────────────────────────────────────────────────────────────
+‖ΨN‖\displays│(g)2≍∫01N2r2N−2g(1−r2)r1−r2Ndr≍N2∫01rN−1g                                           
+tyle\|\Psi_{N│(1−r)1−rNdr{}_{(g)}^{2}\asymp\int_{0}^{1}\frac{N^{2}r^{2N-2}g(1-r^{2})r}{1-r^{2N}}\,
+}\|          │dr\asymp N^{2}\int_{0}^{1}\frac{r^{N-1}g(1-r)}{1-r^{N}}\,dr                         
+─────────────┼────────────────────────────────────────────────────────────────────────────────────
+             │=N2∫01−(1/N)rN−1g(1−r)1−rN𝑑r+N2∫1−(1/N)1rN−1g(1−r)1−rN                              
+             │𝑑r\displaystyle=N^{2}\int_{0}^{1-(1/N)}\frac{r^{N-1}g(1-r)}{1-r^{N}}\,dr+N^{2}\int_{
+             │1-(1/N)}^{1}\frac{r^{N-1}g(1-r)}{1-r^{N}}\,dr                                       
+─────────────┼────────────────────────────────────────────────────────────────────────────────────
+             │≍N2∫01−(1/N)rNg(1−r)𝑑r+N2∫1−(1/N)1g⁡(1−r)N⋅(1−r)𝑑r\displaystyle\asymp                
+             │N^{2}\int_{0}^{1-(1/N)}r^{N}g(1-r)\,dr+N^{2}\int_{1-(1/N)}^{1}\frac{g(1-r)}{N\cdot(1
+             │-r)}\,dr                                                                            
+─────────────┼────────────────────────────────────────────────────────────────────────────────────
+             │=N2∫1/N1(1−r)Ng(r)𝑑r+N∫01/Ng⁡(r)r                                                    
+             │𝑑r.\displaystyle=N^{2}\int_{1/N}^{1}(1-r)^{N}g(r)\,dr+N\int_{0}^{1/N}\frac{g(r)}{r}\
+             │,dr.                                                                                
+─────────────┴────────────────────────────────────────────────────────────────────────────────────
+
+∎
+
+###### Proof of Theorem .
+
+The upper estimate follows from Theorem .
+
+Fix α>1\alpha>1, N≥1N\geq 1, and ak∈𝕋a_{k}\in\mathbb{T}, 0≤k<N0\leq k<N. To establish the lower
+estimate, it suffices to verify that for some absolute constant C>0C>0 we have
+
+───┬──────────────────────────────────────────────────────────────────────────────────────────────
+(4.│I:=∫N−1<1−|z|2<2N−1|∑0≤k<N1z−ak|2dm2(z)≥CN.I:=\int_{N^{-1}<1-|z|^{2}<2N^{-1}}\bigg|\sum_{0\leq
+1) │k<N}\frac{1}{z-a_{k}}\bigg|^{2}\,dm_{2}(z)\geq CN.                                            
+───┴──────────────────────────────────────────────────────────────────────────────────────────────
+
+Since
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∑0≤k<N1z−ak=−∑s≥0zs∑0≤k<Na¯ks+1,\sum_{0\leq k<N}\frac{1}{z-a_{k}}=-\sum_{s\geq 0}z^{s}\sum_{0\leq 
+k<N}\overline{a}_{k}^{s+1},                                                                       
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+I=∑s≥0∫N−1<1−t<2N−1ts|∑0≤k<Naks+1|2𝑑t≳N−1∑0≤s≤2N−1|∑0≤k<Naks+1|2.I=\sum_{s\geq                    
+0}\int_{N^{-1}<1-t<2N^{-1}}t^{s}\Bigl|\sum_{0\leq k<N}a_{k}^{s+1}\Bigr|^{2}\,dt\gtrsim            
+N^{-1}\sum_{0\leq s\leq 2N-1}\Bigl|\sum_{0\leq k<N}a_{k}^{s+1}\Bigr|^{2}.                         
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Now, to get ([4.1]), it remains to check that
+
+────┬─────────────────────────────────────────────────────────────────────────────────────────────
+(4.2│∑1≤j≤2N|∑0≤k<Nbkj|2≥δN2,\sum_{1\leq j\leq 2N}\Bigl|\sum_{0\leq                               
+)   │k<N}b_{k}^{j}\Bigr|^{2}\geq\delta N^{2},                                                     
+────┴─────────────────────────────────────────────────────────────────────────────────────────────
+
+for some absolute constant δ>0\delta>0 and for every family of unimodular numbers
+{bk}0≤k<N\{b_{k}\}_{0\leq k<N}.
+
+Individually, the sums Sj=∑k=0N−1bkjS_{j}=\sum_{k=0}^{N-1}b_{k}^{j} could be of order
+O⁡(N)O(\sqrt{N}) for 1≤j≤NB1\leq j\leq N^{B}, B>1B>1, (see [] for a probabilistic approach
+and [] for a deterministic algebraic approach). However, the sum of the squares of the moduli
+of SjS_{j} for jj between 11 and (1+ε)N(1+\varepsilon)N (not between 11 and NN) admits a good lower
+estimate like in ([4.2]). Our argument here is inspired by that of J. W. S. Cassels in
+[].
+
+For every M≥1M\geq 1 we have
+
+─────────────────────────────────────────────────────────────────────────────────────────────────
+∑1≤j≤M(1−jM+1)|∑0≤k<Nbkj|2\displaystyle\sum_{1\leq j\leq                                         
+M}\Bigl(1-\frac{j}{M+1}\Bigr)\Bigl|\sum_{0\leq k<N}b_{k}^{j}\Bigr|^{2}                           
+─────────────────────────────────────────────────────────────────────────────────────────────────
+=∑1≤j≤M(1−jM+1)(N+∑0≤k,m<N,k≠m(bkb¯m)j)\displaystyle=\sum_{1\leq j\leq                           
+M}\Bigl(1-\frac{j}{M+1}\Bigr)\Bigl(N+\sum_{0\leq k,m<N,\,k\not=m}(b_{k}\bar{b}_{m})^{j}\Bigr)    
+─────────────────────────────────────────────────────────────────────────────────────────────────
+=N∑1≤j≤M(1−jM+1)+∑0≤k<m<N∑|j|≤M,j≠0(1−|j|M+1)(bkb¯m)j\displaystyle=N\sum_{1\leq j\leq            
+M}\Bigl(1-\frac{j}{M+1}\Bigr)+\sum_{0\leq k<m<N}\sum_{|j|\leq                                    
+M,\,j\not=0}\Bigl(1-\frac{|j|}{M+1}\Bigr)(b_{k}\bar{b}_{m})^{j}                                  
+─────────────────────────────────────────────────────────────────────────────────────────────────
+=NM2+∑0≤k<m<N∑|j|≤M(1−|j|M+1)(bkb¯m)j−∑0≤k<m<N1\displaystyle=\frac{NM}{2}+\sum_{0\leq            
+k<m<N}\sum_{|j|\leq M}\Bigl(1-\frac{|j|}{M+1}\Bigr)(b_{k}\bar{b}_{m})^{j}-\sum_{0\leq k<m<N}1    
+─────────────────────────────────────────────────────────────────────────────────────────────────
+≥NM2+∑0≤k<m<N∑|j|≤M(1−|j|M+1)(bkb¯m)j−N⁡(N−1)2\displaystyle\geq\frac{NM}{2}+\sum_{0\leq           
+k<m<N}\sum_{|j|\leq M}\Bigl(1-\frac{|j|}{M+1}\Bigr)(b_{k}\bar{b}_{m})^{j}-\frac{N(N-1)}{2}       
+─────────────────────────────────────────────────────────────────────────────────────────────────
+≥N⁡(M−N+1)2,\displaystyle\geq\frac{N(M-N+1)}{2},                                                  
+─────────────────────────────────────────────────────────────────────────────────────────────────
+
+because the Fejér kernel is non-negative,
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∑|j|≤M(1−|j|M+1)eijx=FM+1(x)≥0,x∈ℝ.\sum_{|j|\leq                                                  
+M}\Bigl(1-\frac{|j|}{M+1}\Bigr)e^{ijx}=F_{M+1}(x)\geq 0,\qquad x\in\mathbb{R}.                    
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Choose now M=2NM=2N. Then
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∑1≤j≤2N|∑0≤k<Nbkj|2≥∑1≤j≤2N(1−j2N+1)|∑0≤k<Nbkj|2≥N22.\sum_{1\leq j\leq 2N}\Bigl|\sum_{0\leq       
+k<N}b_{k}^{j}\Bigr|^{2}\geq\sum_{1\leq j\leq 2N}\Bigl(1-\frac{j}{2N+1}\Bigr)\Bigl|\sum_{0\leq     
+k<N}b_{k}^{j}\Bigr|^{2}\geq\frac{N^{2}}{2}.                                                       
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+∎
+
+## 5. Proofs of Theorems  and 
+
+###### Proof of Theorem .
+
+Denote M=‖f‖H∞M=\|f\|_{H^{\infty}}. Given N≥1N\geq 1, set
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+WN(t)=Nt−2∫0tRe⁡(e2πiuf(e2πiu))𝑑u,t≥0.W_{N}(t)=Nt-2\int_{0}^{t}\xRe(e^{2\pi iu}f(e^{2\pi           
+iu}))\,du,\qquad t\geq 0.                                                                         
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+We have WN(0)=0W_{N}(0)=0, WN(1)=NW_{N}(1)=N,
+
+──────────────────────────────────────────────────────────────
+|WN′(t)−N|≤2M,t≥0.|W^{\prime}_{N}(t)-N|\leq 2M,\qquad t\geq 0.
+──────────────────────────────────────────────────────────────
+
+For sufficiently large NN, the function WNW_{N} increases, and we set xN,k=WN−1
+(k)x_{N,k}=W_{N}^{-1}(k), 0≤k≤N0\leq k\leq N. We have
+
+────┬─────────────────────────────────────────────────────────────────────────────────────────────
+(5.1│|xN,k+1−xN,k|=N−1+O⁡(N−2M),0≤k<N,N→∞.|x_{N,k+1}-x_{N,k}|=N^{-1}+O(N^{-2}M),\qquad 0\leq       
+)   │k<N,\,N\to\infty.                                                                            
+────┴─────────────────────────────────────────────────────────────────────────────────────────────
+
+Put
+
+───────────────────────────────────────────────────────────────────────────────
+hN(z)=∑0≤k<N1z−e2πixN,k.h_{N}(z)=\sum_{0\leq k<N}\frac{1}{z-e^{2\pi ix_{N,k}}}.
+───────────────────────────────────────────────────────────────────────────────
+
+Then hN∈𝒮ℱNh_{N}\in\SF_{N}.
+
+Given z=re2πis∈𝔻z=re^{2\pi is}\in\mathbb{D}, choose 0≤m<N0\leq m<N such that
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+|e2πis−e2πixN,m|=min0≤k<N⁡|e2πis−e2πixN,k|.\bigl|e^{2\pi is}-e^{2\pi ix_{N,m}}\bigr|=\min_{0\leq   
+k<N}\bigl|e^{2\pi is}-e^{2\pi ix_{N,k}}\bigr|.                                                    
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Set yN,k=xN,m+(k−m)/Ny_{N,k}=x_{N,m}+(k-m)/N, 0≤k<N0\leq k<N. By ([5.1]), we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+|e2πixN,k−e2πiyN,k|=O⁡(N−1M|1−e2πi(k−m)/N|),0≤k<N,N→∞,|e^{2\pi ix_{N,k}}-e^{2\pi                   
+iy_{N,k}}|=O(N^{-1}M|1-e^{2\pi i(k-m)/N}|),\quad 0\leq k<N,\,N\to\infty,                          
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+and
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+|z−e2πixN,k|≍|z−e2πiyN,k|,0≤k⁡<N,N>N(M).|z-e^{2\pi ix_{N,k}}|\asymp|z-e^{2\pi iy_{N,k}}|,\qquad    
+0\leq k<N,\,N>N(M).                                                                               
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Furthermore,
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∑0≤k<N1z−e2πiyN,k=e−2πixN,mΨN(ze−2πixN,m).\sum_{0\leq k<N}\frac{1}{z-e^{2\pi iy_{N,k}}}=e^{-2\pi  
+ix_{N,m}}\Psi_{N}(ze^{-2\pi ix_{N,m}}).                                                           
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Therefore,
+
+───┬────────────────────────────────────────────────────────┬─────────────────────────────────────
+(5.│                                                        │|hN(z)−e−2πixN,mΨN(ze−2πi            
+2) │                                                        │xN,m)|\displaystyle\bigl|h_{N}(z)-e^{
+   │                                                        │-2\pi ix_{N,m}}\Psi_{N}(ze^{-2\pi    
+   │                                                        │ix_{N,m}})\bigr|                     
+───┼────────────────────────────────────────────────────────┼─────────────────────────────────────
+   │≤∑0≤k<N|1z−e2πixN,k−1z−e2πi                             │                                     
+   │yN,k|\displaystyle\leq\sum_{0\leq                       │                                     
+   │k<N}\Bigl|\frac{1}{z-e^{2\pi                            │                                     
+   │ix_{N,k}}}-\frac{1}{z-e^{2\pi iy_{N,k}}}\Bigr|          │                                     
+───┼────────────────────────────────────────────────────────┼─────────────────────────────────────
+   │=∑0≤k<N|e2πixN,k−e2πiyN,k||z−e2πixN,k|⋅|z−e2πi          │                                     
+   │yN,k|\displaystyle=\sum_{0\leq k<N}\frac{|e^{2\pi       │                                     
+   │ix_{N,k}}-e^{2\pi iy_{N,k}}|}{|z-e^{2\pi                │                                     
+   │ix_{N,k}}|\cdot|z-e^{2\pi iy_{N,k}}|}                   │                                     
+───┼────────────────────────────────────────────────────────┼─────────────────────────────────────
+   │=O⁡(N−1M)∑0≤k<N|1−e2πi(k−m)/N||z−e2πi                    │                                     
+   │yN,k|2\displaystyle=O(N^{-1}M)\sum_{0\leq               │                                     
+   │k<N}\frac{|1-e^{2\pi i(k-m)/N}|}{|z-e^{2\pi             │                                     
+   │iy_{N,k}}|^{2}}                                         │                                     
+───┼────────────────────────────────────────────────────────┼─────────────────────────────────────
+   │=O⁡(N−1M)                                                │                                     
+   │(∑0≤j<N⁡(1−|z|)j/N(1−|z|)2+∑N⁡(1−|z|)≤j<Nj/N(j/N)2)\displa│                                     
+   │ystyle=O(N^{-1}M)\Bigl(\sum_{0\leq                      │                                     
+   │j<N(1-|z|)}\frac{j/N}{(1-|z|)^{2}}+\sum_{N(1-|z|)\leq   │                                     
+   │j<N}\frac{j/N}{(j/N)^{2}}\Bigr)                         │                                     
+───┼────────────────────────────────────────────────────────┼─────────────────────────────────────
+   │=O⁡(N−1M)(1N(1−|z|)2∑0≤j<N⁡(1−|z|)j+N                     │                                     
+   │∑N⁡(1−|z|)≤j<N1j)\displaystyle=O(N^{-1}M)\Bigl(\frac{1}{N│                                     
+   │(1-|z|)^{2}}\!\!\sum_{0\leq                             │                                     
+   │j<N(1-|z|)}j\,+\,N\!\!\!\!\sum_{N(1-|z|)\leq            │                                     
+   │j<N}\frac{1}{j}\Bigr)                                   │                                     
+───┼────────────────────────────────────────────────────────┼─────────────────────────────────────
+   │≤C0Mlog⁡e1−|z|,\displaystyle\leq                         │                                     
+   │C_{0}M\log\frac{e}{1-|z|},                              │                                     
+───┴────────────────────────────────────────────────────────┴─────────────────────────────────────
+
+for some absolute constant C0C_{0}, for N≥N⁡(M)N\geq N(M).
+
+Since
+
+────────────────────────────────────────────────
+|ΨN(z)|≤11−|z|,|\Psi_{N}(z)|\leq\frac{1}{1-|z|},
+────────────────────────────────────────────────
+
+we conclude that
+
+─────────────────┬────────────────────────────────────────────────────────────────────────────────
+|hN              │≤|e−2πixN,mΨN(ze−2πixN,m)|\displaystyle\leq\bigl|e^{-2\pi                       
+(z)|\displaystyle│ix_{N,m}}\Psi_{N}(ze^{-2\pi ix_{N,m}})\bigr|                                    
+|h_{N}(z)|       │                                                                                
+─────────────────┼────────────────────────────────────────────────────────────────────────────────
+                 │+|hN(z)−e−2πixN,mΨN(ze−2πi                                                      
+                 │xN,m)|\displaystyle\qquad\qquad\qquad\qquad+\bigl|h_{N}(z)-e^{-2\pi             
+                 │ix_{N,m}}\Psi_{N}(ze^{-2\pi ix_{N,m}})\bigr|                                    
+─────────────────┼────────────────────────────────────────────────────────────────────────────────
+                 │≤11−|z|+C0M                                                                     
+                 │log⁡e1−|z|,z∈𝔻,N≥N⁡(M).\displaystyle\leq\frac{1}{1-|z|}+C_{0}M\log\frac{e}{1-|z|},
+                 │\qquad z\in\mathbb{D},\,N\geq N(M).                                             
+─────────────────┴────────────────────────────────────────────────────────────────────────────────
+
+Furthermore, given z∈𝔻z\in\mathbb{D}, we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+f⁡(z)=12πi∫𝕋f⁡(ζ)ζ−z𝑑ζ=12πi∫𝕋ζf(ζ)+ζf(ζ)¯ζ⁡(ζ−z)𝑑ζ=1πi∫𝕋Re⁡(ζf(ζ))ζ⁡(ζ−z)𝑑ζ=2∫01Re⁡(e2πitf(e2πit))e2πi  
+t−z𝑑tf(z)=\frac{1}{2\pi i}\int_{\mathbb{T}}\frac{f(\zeta)}{\zeta-z}\,d\zeta=\frac{1}{2\pi         
+i}\int_{\mathbb{T}}\frac{\zeta f(\zeta)+\overline{\zeta f(\zeta)}}{\zeta(\zeta-z)}\,d\zeta\\      
+=\frac{1}{\pi i}\int_{\mathbb{T}}\frac{\xRe(\zeta                                                 
+f(\zeta))}{\zeta(\zeta-z)}\,d\zeta=2\int_{0}^{1}\frac{\xRe(e^{2\pi it}f(e^{2\pi it}))}{e^{2\pi    
+it}-z}\,dt                                                                                        
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+and
+
+──────────────────────────────────────────────────────────
+0=∫011e2πit−z𝑑t.0=\int_{0}^{1}\frac{1}{e^{2\pi it}-z}\,dt.
+──────────────────────────────────────────────────────────
+
+Hence,
+
+─────────────────────────────────────────────────────────────────────────────────────
+f⁡(z)=∫01WN′(t)z−e2πit𝑑t,f(z)=\int_{0}^{1}\frac{W^{\prime}_{N}(t)}{z-e^{2\pi it}}\,dt,
+─────────────────────────────────────────────────────────────────────────────────────
+
+and
+
+─────────┬────────────────────────────────────────────────────────────────────────────────────────
+|f(z)−\di│hN(z)|=|∑0≤k<N(∫xN,kxN,k+1WN′(t)z−e2πit𝑑t−1z−e2πixN,k)|\displaystyle                    
+splaystyl│h_{N}(z)|=\biggl|\sum_{0\leq                                                            
+e|f(z)-  │k<N}\biggl(\int_{x_{N,k}}^{x_{N,k+1}}\frac{W^{\prime}_{N}(t)}{z-e^{2\pi                 
+         │it}}\,dt-\frac{1}{z-e^{2\pi ix_{N,k}}}\biggr)\biggr|                                    
+─────────┼────────────────────────────────────────────────────────────────────────────────────────
+         │=|∑0≤k<N∫xN,kxN,k+1e2πit−e2πixN,k(z−e2πit)(z−e2πixN,k)WN′(t)                            
+         │𝑑t|\displaystyle=\biggl|\sum_{0\leq k<N}\int_{x_{N,k}}^{x_{N,k+1}}\frac{e^{2\pi         
+         │it}-e^{2\pi ix_{N,k}}}{(z-e^{2\pi it})(z-e^{2\pi ix_{N,k}})}W^{\prime}_{N}(t)\,dt\biggr|
+─────────┼────────────────────────────────────────────────────────────────────────────────────────
+         │=2π|∑0≤k<N∫xN,kxN,k+1e2πixN,kt−xN,k+O⁡(N−2)(z−e2πixN,k)2+O⁡(N−1)WN′(t)                    
+         │𝑑t|\displaystyle=2\pi\biggl|\sum_{0\leq k<N}\int_{x_{N,k}}^{x_{N,k+1}}e^{2\pi           
+         │ix_{N,k}}\frac{t-x_{N,k}+O(N^{-2})}{(z-e^{2\pi                                          
+         │ix_{N,k}})^{2}+O(N^{-1})}W^{\prime}_{N}(t)\,dt\biggr|                                   
+─────────┼────────────────────────────────────────────────────────────────────────────────────────
+         │=πN|∑0≤k<N(e2πixN,k(z−e2πixN,k)2+O⁡(N−1M))|\displaystyle=\frac{\pi}{N}\biggl|\sum_{0\leq 
+         │k<N}\Bigl(\frac{e^{2\pi ix_{N,k}}}{(z-e^{2\pi ix_{N,k}})^{2}}+O(N^{-1}M)\Bigr)\biggr|   
+─────────┴────────────────────────────────────────────────────────────────────────────────────────
+
+for N≥N⁡(M)N\geq N(M). Since KK is a compact subset of 𝔻\mathbb{D}, we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+|∑0≤k<Ne2πiyN,k(z−e2πiyN,k)2|=|N2zN−1(e2πiNyN,1−zN)2|→0,\Bigl|\sum_{0\leq k<N}\frac{e^{2\pi       
+iy_{N,k}}}{(z-e^{2\pi iy_{N,k}})^{2}}\Bigr|=\Bigl|\frac{N^{2}z^{N-1}}{(e^{2\pi                    
+iNy_{N,1}}-z^{N})^{2}}\Bigr|\to 0,                                                                
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+uniformly in z∈Kz\in K as N→∞N\to\infty, and
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+|f⁡(z)−hN(z)|≤πN∑0≤k<N|e2πixN,k(z−e2πixN,k)2−e2πiyN,k(z−e2πi                                       
+yN,k)2|+o⁡(1)\displaystyle|f(z)-h_{N}(z)|\leq\frac{\pi}{N}\sum_{0\leq k<N}\Bigl|\frac{e^{2\pi      
+ix_{N,k}}}{(z-e^{2\pi ix_{N,k}})^{2}}-\frac{e^{2\pi iy_{N,k}}}{(z-e^{2\pi                         
+iy_{N,k}})^{2}}\Bigr|+o(1)                                                                        
+──────────────────────────────────────────────────────────────────────────────────────────────────
+≲C⁡(K)MN2∑0≤k<N|1−e2πi(k−m)/N|+o⁡(1)=o⁡(1),\displaystyle\lesssim\frac{C(K)M}{N^{2}}\sum_{0\leq       
+k<N}|1-e^{2\pi i(k-m)/N}|+o(1)=o(1),                                                              
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+uniformly in z∈Kz\in K as N→∞N\to\infty, ∎
+
+###### Proof of Theorem .
+
+We use the notation from the proof of Theorem . Given f∈H∞f\in H^{\infty}, ε>0\varepsilon>0,
+and a compact subset KK of 𝔻\mathbb{D}, choose N≥N⁡(f,ε,K)N\geq N(f,\varepsilon,K) and hN∈𝒮
+ℱNh_{N}\in\SF_{N} constructed in the proof of Theorem  so that
+
+─────────────────────────────────────────────────────────
+‖f−hN‖L∞(K)≤ε,\|f-h_{N}\|_{L^{\infty}(K)}\leq\varepsilon,
+─────────────────────────────────────────────────────────
+
+It remains to verify the integral estimate ([2.2]). Fix r∈(0,1)r\in(0,1) and set
+
+──────────────────────────────────────────────────────────────────────────────────────────
+v1(e2πit)=|ΨN(e2πitr)|,0≤t<1.v_{1}(e^{2\pi it})=|\Psi_{N}(e^{2\pi it}r)|,\qquad 0\leq t<1.
+──────────────────────────────────────────────────────────────────────────────────────────
+
+Since
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+v1(e2πit)=NrN−1|e2πitNrN−1|,0≤t<1,v_{1}(e^{2\pi it})=\frac{Nr^{N-1}}{|e^{2\pi itN}r^{N}-1|},\qquad
+0\leq t<1,                                                                                        
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+the function t↦v1(e2πit)t\mapsto v_{1}(e^{2\pi it}) is even and decreases on [0,1/(2N)][0,1/(2N)].
+Furthermore, we set
+
+─────────────┬────────────────────────────────────────────────────────────────────────────────────
+v2(e2πi      │={v1(e2πit),e2πit∈U:={e2πiu:−πN≤u≤πN},v1(eπi/N),e2πi                                
+t)\displaysty│t∉U,\displaystyle=\begin{cases}v_{1}\bigl(e^{2\pi it}\bigr),\qquad e^{2\pi it}\in   
+le           │U:=\{e^{2\pi iu}:\ -\frac{\pi}{N}\leq u\leq\frac{\pi}{N}\},\\ v_{1}\bigl(e^{\pi     
+v_{2}(e^{2\pi│i/N}\bigr),\qquad e^{2\pi it}\notin U,\end{cases}                                   
+it})         │                                                                                    
+─────────────┼────────────────────────────────────────────────────────────────────────────────────
+w⁡(t)\displays│=∫0tv2p(e2πiu)𝑑u,0≤t≤1.\displaystyle=\int_{0}^{t}v^{p}_{2}(e^{2\pi iu})\,du,\qquad  
+tyle w(t)    │0\leq t\leq 1.                                                                      
+─────────────┴────────────────────────────────────────────────────────────────────────────────────
+
+Then the function t↦v2(e2πit)t\mapsto v_{2}(e^{2\pi it}) is decreasing on [0,1][0,1], and the
+function ww is concave on [0,1][0,1].
+
+If
+
+───┬──────────────────────────────────────────────────────────────────────────────────────────────
+(5.│|e2πis−e2πixN,m|=min0≤k<N⁡|e2πis−e2πixN,k|,\bigl|e^{2\pi is}-e^{2\pi                           
+3) │ix_{N,m}}\bigr|=\min_{0\leq k<N}\bigl|e^{2\pi is}-e^{2\pi ix_{N,k}}\bigr|,                    
+───┴──────────────────────────────────────────────────────────────────────────────────────────────
+
+then, by ([5.2]), we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+|hN(e2πisr)|≤|ΨN(ze−2πixN,m)|+C0Mlog⁡e1−r.|h_{N}(e^{2\pi is}r)|\leq|\Psi_{N}(ze^{-2\pi             
+ix_{N,m}})|+C_{0}M\log\frac{e}{1-r}.                                                              
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Using the argument in the proof of ([5.2]) we obtain that, under condition ([5.3]), if
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+|e2πis−e2πixN,m|≥|1−eπi/N|,\bigl|e^{2\pi is}-e^{2\pi ix_{N,m}}\bigr|\geq\bigl|1-e^{\pi i/N}\bigr|,
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+then
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+|hN(e2πisr)|≤|ΨN(eπi/N)|+C0Mlog⁡e1−r.|h_{N}(e^{2\pi is}r)|\leq|\Psi_{N}(e^{\pi                     
+i/N})|+C_{0}M\log\frac{e}{1-r}.                                                                   
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Since the function t↦v1(e2πit)t\mapsto v_{1}(e^{2\pi it}) is even, we conclude that
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+|hN(e2πisr)|≤v2(e2πi|s−xN,m|)+C0Mlog⁡e1−r.|h_{N}(e^{2\pi is}r)|\leq v_{2}(e^{2\pi                  
+i|s-x_{N,m}|})+C_{0}M\log\frac{e}{1-r}.                                                           
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+We divide the interval [0,1][0,1] into subintervals J2
+k=[xN,k,(xN,k+xN,k+1)/2]J_{2k}=[x_{N,k},(x_{N,k}+x_{N,k+1})/2], J2
+k+1=[(xN,k+xN,k+1)/2,xN,k+1]J_{2k+1}=[(x_{N,k}+x_{N,k+1})/2,x_{N,k+1}], 0≤k<N0\leq k<N.
+
+Then
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∫01|hN(e2πisr)|p𝑑s=∑0≤k<N∫J2k∪J2k+1|hN(e2πisr)|p𝑑s\displaystyle\int_{0}^{1}|h_{N}(e^{2\pi         
+is}r)|^{p}\,ds=\sum_{0\leq k<N}\int_{J_{2k}\cup J_{2k+1}}|h_{N}(e^{2\pi is}r)|^{p}\,ds            
+──────────────────────────────────────────────────────────────────────────────────────────────────
+≤(1+β)(∫J2N−1∪J0v2p(e2πis)𝑑s+∑0<k<N∫J2k−1∪J2kv2p(e2πi|s−xN,k|)                                    
+𝑑s)\displaystyle\leq(1+\beta)\biggl(\int_{J_{2N-1}\cup J_{0}}v^{p}_{2}(e^{2\pi                    
+is})\,ds+\sum_{0<k<N}\int_{J_{2k-1}\cup J_{2k}}v^{p}_{2}(e^{2\pi i|s-x_{N,k}|})\,ds\biggr)        
+──────────────────────────────────────────────────────────────────────────────────────────────────
++ρ⁡(β)C0p‖f‖H∞plogp                                                                                
+e1−r\displaystyle+\rho(\beta)C^{p}_{0}\|f\|^{p}_{H^{\infty}}\log^{p}\frac{e}{1-r}                 
+──────────────────────────────────────────────────────────────────────────────────────────────────
+=(1+β)∑0≤k<N(w⁡(|J2k|)+w⁡(|J2k+1|))+ρ⁡(β)C0p‖f‖H∞plogpe1−r,\displaystyle=(1+\beta)\sum_{0\leq        
+k<N}\bigl(w(|J_{2k}|)+w(|J_{2k+1}|)\bigr)+\rho(\beta)C^{p}_{0}\|f\|^{p}_{H^{\infty}}\log^{p}\frac{
+e}{1-r},                                                                                          
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+where |J||J| is the length of JJ. Since the function ww is concave and ∑0≤k<N(|J2k|+|J2
+k+1|)=1\sum_{0\leq k<N}(|J_{2k}|+|J_{2k+1}|)=1, we conclude that
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∫01|hN(e2πisr)|p𝑑s≤(1+β)⋅2Nw(12N)+ρ⁡(β)C0p‖f‖H∞plogpe1−r\displaystyle\int_{0}^{1}|h_{N}(e^{2\pi    
+is}r)|^{p}\,ds\leq(1+\beta)\cdot                                                                  
+2Nw\Bigl(\frac{1}{2N}\Bigr)+\rho(\beta)C^{p}_{0}\|f\|^{p}_{H^{\infty}}\log^{p}\frac{e}{1-r}       
+──────────────────────────────────────────────────────────────────────────────────────────────────
+=(1+β)∫01|ΨN(e2πisr)|p𝑑s+ρ⁡(β)C0p‖f‖H∞plogp                                                        
+e1−r.\displaystyle=(1+\beta)\int_{0}^{1}|\Psi_{N}(e^{2\pi                                         
+is}r)|^{p}\,ds+\rho(\beta)C^{p}_{0}\|f\|^{p}_{H^{\infty}}\log^{p}\frac{e}{1-r}.                   
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+∎
+
+## 6. Proofs of Theorems  and 
+
+###### Proof of Theorem .
+
+Denote by 𝒮(g)\mathcal{S}_{(g)} the closure of the set 𝒮ℱ\SF in A(g)2A^{2}_{(g)}. Since
+‖f‖(g1)≤‖f‖(g2)\|f\|_{(g_{1})}\leq\|f\|_{(g_{2})} when g1≤g2g_{1}\leq g_{2}, we need only to
+consider the cases g⁡(t)=tg(t)=t and g⁡(t)=o⁡(t)g(t)=o(t), t→0t\to 0.
+
+(A) Let g⁡(t)=tg(t)=t. Then A(g)2=A12A^{2}_{(g)}=A^{2}_{1}. We are going to verify that
+
+───┬──────────────────────────────────────────────────────────────────────────────────────────────
+(6.│lim infN→∞infg∈𝒮                                                                              
+1) │ℱN‖f−g‖12≥π23,f∈A12.\liminf_{N\to\infty}\inf_{g\in\SF_{N}}\|f-g\|^{2}_{1}\geq\frac{\pi^{2}}{3}
+   │,\qquad f\in A^{2}_{1}.                                                                       
+───┴──────────────────────────────────────────────────────────────────────────────────────────────
+
+Since every 𝒮ℱN\SF_{N} is compact in A12A^{2}_{1}, we can then conclude that 𝒮(g)=𝒮
+ℱ\mathcal{S}_{(g)}=\SF.
+
+Assume that ([6.1]) does not hold. Then for some ε∈(0,π2/12)\varepsilon\in(0,\pi^{2}/12) we
+find f∈A12f\in A^{2}_{1}, a sequence {Nm}m≥1\{N_{m}\}_{m\geq 1} such that
+limm→∞Nm=∞\lim_{m\to\infty}N_{m}=\infty, and a sequence {fm}m≥1\{f_{m}\}_{m\geq 1}, fm∈𝒮
+ℱNmf_{m}\in\SF_{N_{m}}, m≥1m\geq 1, such that
+
+─────┬─────────────────────────────────────────────────────────────────────────────────────────
+(6.2)│‖f−fm‖12≤π23−4ε,m≥1.\|f-f_{m}\|^{2}_{1}\leq\frac{\pi^{2}}{3}-4\varepsilon,\qquad m\geq 1.
+─────┴─────────────────────────────────────────────────────────────────────────────────────────
+
+Given δ∈(0,1)\delta\in(0,1), put gδ(t)=min⁡(δ,t)g_{\delta}(t)=\min(\delta,t). Since
+
+────┬─────────────────────────────────────────────────────────────────────────────────────────────
+(6.3│|f⁡(z)|2gδ(1−|z|2)≤|f⁡(z)|2                                                                    
+)   │(1−|z|2),z∈𝔻,|f(z)|^{2}g_{\delta}(1-|z|^{2})\leq|f(z)|^{2}(1-|z|^{2}),\qquad z\in\mathbb{D}, 
+────┴─────────────────────────────────────────────────────────────────────────────────────────────
+
+and the function z↦|f⁡(z)|2(1−|z|2)z\mapsto|f(z)|^{2}(1-|z|^{2}) is integrable on 𝔻\mathbb{D}, by
+Lebesgue’s dominated convergence theorem we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+limδ→0∫𝔻|f⁡(z)|2gδ(1−|z|2)dm2(z)=0.\lim_{\delta\to                                                 
+0}\int_{\mathbb{D}}|f(z)|^{2}g_{\delta}(1-|z|^{2})\,dm_{2}(z)=0.                                  
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Choose δ∈(0,1)\delta\in(0,1) such that
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∫𝔻|f⁡(z)|2gδ(1−|z|2)dm2                                                                            
+(z)≤ε28.\int_{\mathbb{D}}|f(z)|^{2}g_{\delta}(1-|z|^{2})\,dm_{2}(z)\leq\frac{\varepsilon^{2}}{8}. 
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+By ([6.2]) and ([6.3]) we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∫𝔻|f⁡(z)−fm(z)|2gδ(1−|z|2)dm2(z)≤π26−2                                                             
+ε,m≥1,\int_{\mathbb{D}}|f(z)-f_{m}(z)|^{2}g_{\delta}(1-|z|^{2})\,dm_{2}(z)\leq\frac{\pi^{2}}{6}-2\
+varepsilon,\qquad m\geq 1,                                                                        
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+and, hence,
+
+─────────────────────────┬────────────────────────────────────────────────────────────────────────
+∫𝔻|fm                    │gδ(1−|z|2)dm2(z)\displaystyle g_{\delta}(1-|z|^{2})\,dm_{2}(z)          
+(z)|2\displaystyle\int_{\│                                                                        
+mathbb{D}}|f_{m}(z)|^{2} │                                                                        
+─────────────────────────┼────────────────────────────────────────────────────────────────────────
+                         │≤(1+ε4)∫𝔻|f⁡(z)−fm(z)|2gδ(1−|z|2)dm2                                     
+                         │(z)\displaystyle\leq\Bigl(1+\frac{\varepsilon}{4}\Bigr)\int_{\mathbb{D}}
+                         │|f(z)-f_{m}(z)|^{2}g_{\delta}(1-|z|^{2})\,dm_{2}(z)                     
+─────────────────────────┼────────────────────────────────────────────────────────────────────────
+                         │+(1+4ε)∫𝔻|f(z)|2gδ(1−|z|2)dm2(z)\displaystyle\qquad+\Bigl(1+\frac{4}{\va
+                         │repsilon}\Bigr)\int_{\mathbb{D}}|f(z)|^{2}g_{\delta}(1-|z|^{2})\,dm_{2}(
+                         │z)                                                                      
+─────────────────────────┼────────────────────────────────────────────────────────────────────────
+                         │≤π26−ε,m≥1.\displaystyle\leq\frac{\pi^{2}}{6}-\varepsilon,\qquad m\geq  
+                         │1.                                                                      
+─────────────────────────┴────────────────────────────────────────────────────────────────────────
+
+Since the function gδg_{\delta} is concave and non-decreasing, gδ(0)=0g_{\delta}(0)=0, and ∫0gδ(t)
+t−1𝑑t<∞\displaystyle\int_{0}g_{\delta}(t)t^{-1}\,dt<\infty, we can apply Theorem  and obtain
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∫𝔻|ΨNm(z)|2gδ(1−|z|2)dm2                                                                          
+(z)≤π26−ε,m≥1.\int_{\mathbb{D}}|\Psi_{N_{m}}(z)|^{2}g_{\delta}(1-|z|^{2})\,dm_{2}(z)\leq\frac{\pi^
+{2}}{6}-\varepsilon,\qquad m\geq 1.                                                               
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Since the functions ΨNm\Psi_{N_{m}} tend to 00 uniformly on compact subsets of 𝔻\mathbb{D} as
+m→∞m\to\infty, we conclude that
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∫𝔻|ΨNm(z)|2(1−|z|2)dm2                                                                            
+(z)≤π26−ε2,m≥m⁡(δ),\int_{\mathbb{D}}|\Psi_{N_{m}}(z)|^{2}(1-|z|^{2})\,dm_{2}(z)\leq\frac{\pi^{2}}{6
+}-\frac{\varepsilon}{2},\qquad m\geq m(\delta),                                                   
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+which contradicts to Theorem .
+
+This contradiction establishes relation ([6.1]) and, hence, the equality 𝒮(g)=𝒮
+ℱ\mathcal{S}_{(g)}=\SF for g⁡(t)=tg(t)=t.
+
+(B) Let g⁡(t)=o⁡(t)g(t)=o(t), t→0t\to 0, and let f∈A(g)2f\in A^{2}_{(g)}. Replacing ff by the function
+z↦f⁡((1−δ)z)z\mapsto f((1-\delta)z) with small positive δ\delta, we can assume that f∈H∞f\in
+H^{\infty}. By Theorem , there exist hN∈𝒮ℱNh_{N}\in\SF_{N}, such that hNh_{N} tend to ff
+uniformly on compact subsets of 𝔻\mathbb{D}, N→∞N\to\infty, and for r∈(0,1)r\in(0,1) we have
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∫01|hN(e2πisr)|2𝑑s≤2∫01|ΨN(e2πisr)|2𝑑s+2C02‖f‖H∞2log2e1−r.\int_{0}^{1}|h_{N}(e^{2\pi              
+is}r)|^{2}\,ds\leq 2\int_{0}^{1}|\Psi_{N}(e^{2\pi                                                 
+is}r)|^{2}\,ds+2C^{2}_{0}\|f\|^{2}_{H^{\infty}}\log^{2}\frac{e}{1-r}.                             
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+By Corollary  (B), we conclude that
+
+──────────────────────────────────────────────────────────────
+‖f−hN‖(g)2→0,N→∞.\|f-h_{N}\|^{2}_{(g)}\to 0,\qquad N\to\infty.
+──────────────────────────────────────────────────────────────
+
+Thus, 𝒮(g)=A(g)2\mathcal{S}_{(g)}=A^{2}_{(g)}. ∎
+
+###### Remark 15.
+
+Given α>1\alpha>1, denote by 𝒮α\mathcal{S}_{\alpha} the closure of the set 𝒮ℱ\SF in
+Aα2A^{2}_{\alpha}. An alternative way to prove that 𝒮α=Aα2\mathcal{S}_{\alpha}=A^{2}_{\alpha} for
+α>1\alpha>1, follows the scheme proposed by Korevaar in [] (with a reference to
+A. Beurling). Namely, in the case α>2\alpha>2, we use that
+limN→∞‖ΨN‖α=0\lim_{N\to\infty}\|\Psi_{N}\|_{\alpha}=0 to show that the functions
+z↦−(z−w)−1z\mapsto-(z-w)^{-1}, w∈𝕋w\in\mathbb{T}, belong to 𝒮α\mathcal{S}_{\alpha}. As a
+consequence, the real linear space ℛ\mathcal{R} spanned by the family of functions {i
+w(z−w)2:w∈𝕋}\Bigl\{\dfrac{iw}{(z-w)^{2}}:w\in\mathbb{T}\Bigr\} is contained in the set
+𝒮α\mathcal{S}_{\alpha}. In the case 1<α≤21<\alpha\leq 2, using an explicit but more complicated
+argument we can establish that the real linear space ℛ~\widetilde{\mathcal{R}} spanned by the family
+{1z−w:w∈𝕋}\Bigl\{\dfrac{1}{z-w}:w\in\mathbb{T}\Bigr\} is contained in the set
+𝒮α\mathcal{S}_{\alpha}. Then an argument based on the Hahn–Banach theorem permits us to show that,
+for α>2\alpha>2, ℛ\mathcal{R} is dense in Aα2A^{2}_{\alpha} (for α>1\alpha>1,
+ℛ~\widetilde{\mathcal{R}} is dense in Aα2A^{2}_{\alpha}), and to conclude.
+
+###### Proof of Theorem .
+
+Because of ([6.1]), we need only to verify that for every f∈A12f\in A^{2}_{1},
+ε>0\varepsilon>0, and for every N≥N⁡(f,ϵ)N\geq N(f,\epsilon), there exists h∈𝒮ℱNh\in\SF_{N} such that
+
+───────────────────────────────────────────────────────────────
+‖f−h‖12≤π23+ε.\|f-h\|^{2}_{1}\leq\frac{\pi^{2}}{3}+\varepsilon.
+───────────────────────────────────────────────────────────────
+
+Replacing ff by z↦f⁡((1−δ)z)z\mapsto f((1-\delta)z) with small positive δ\delta, we can assume that
+f∈H∞f\in H^{\infty}. Given 0<β<10<\beta<1, choose η∈(0,1)\eta\in(0,1) such that
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∫𝔻∖(1−η)𝔻|f⁡(z)|2dm2(z)+∫1−η1(1−r2)log2e1−r                                                        
+𝑑r<β2.\int_{\mathbb{D}\setminus(1-\eta)\mathbb{D}}|f(z)|^{2}\,dm_{2}(z)+\int_{1-\eta}^{1}(1-r^{2})
+\log^{2}\frac{e}{1-r}\,dr<\beta^{2}.                                                              
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+By Theorem , for every N≥N⁡(f,ϵ)N\geq N(f,\epsilon), there exists h∈𝒮ℱNh\in\SF_{N} such that
+
+────────────────────────────────────────────────────────────────────
+‖f−h‖L∞((1−η)𝔻)2<β\|f-h\|^{2}_{L^{\infty}((1-\eta)\mathbb{D})}<\beta
+────────────────────────────────────────────────────────────────────
+
+and
+
+──────────────────────────────────────────────────────────────────────────────────────────────────
+∫01|h⁡(e2πisr)|2𝑑s≤(1+β)∫01|ΨN(e2πisr)|2𝑑s+1+ββC02‖f‖H∞2log2e1−r,0<r<1.\int_{0}^{1}|h(e^{2\pi      
+is}r)|^{2}\,ds\leq(1+\beta)\int_{0}^{1}|\Psi_{N}(e^{2\pi is}r)|^{2}\,ds\\                         
++\frac{1+\beta}{\beta}C^{2}_{0}\|f\|^{2}_{H^{\infty}}\log^{2}\frac{e}{1-r},\qquad 0<r<1.          
+──────────────────────────────────────────────────────────────────────────────────────────────────
+
+Then
+
+───────┬──────────────────────────────────────────────────────────────────────────────────────────
+∥f\disp│−h∥21\displaystyle-h\|^{2}_{1}                                                            
+laystyl│                                                                                          
+e\|f   │                                                                                          
+───────┼──────────────────────────────────────────────────────────────────────────────────────────
+       │=2∫(1−η)𝔻|f⁡(z)−h⁡(z)|2(1−|z|2)dm2                                                          
+       │(z)\displaystyle=2\int_{(1-\eta)\mathbb{D}}|f(z)-h(z)|^{2}(1-|z|^{2})\,dm_{2}(z)          
+───────┼──────────────────────────────────────────────────────────────────────────────────────────
+       │+2∫𝔻∖(1−η)                                                                                
+       │𝔻|f(z)−h(z)|2(1−|z|2)dm2(z)\displaystyle\qquad\qquad\qquad+2\int_{\mathbb{D}\setminus(1-\e
+       │ta)\mathbb{D}}|f(z)-h(z)|^{2}(1-|z|^{2})\,dm_{2}(z)                                       
+───────┼──────────────────────────────────────────────────────────────────────────────────────────
+       │≤β+2(1+β−1)∫𝔻∖(1−η)𝔻|f⁡(z)|2(1−|z|2)dm2                                                    
+       │(z)\displaystyle\leq\beta+2(1+\beta^{-1})\int_{\mathbb{D}\setminus(1-\eta)\mathbb{D}}|f(z)
+       │|^{2}(1-|z|^{2})\,dm_{2}(z)                                                               
+───────┼──────────────────────────────────────────────────────────────────────────────────────────
+       │+2(1+β)∫𝔻∖(1−η)                                                                           
+       │𝔻|h(z)|2(1−|z|2)dm2(z)\displaystyle\qquad\qquad\qquad+2(1+\beta)\int_{\mathbb{D}\setminus(
+       │1-\eta)\mathbb{D}}|h(z)|^{2}(1-|z|^{2})\,dm_{2}(z)                                        
+───────┼──────────────────────────────────────────────────────────────────────────────────────────
+       │≤β+2β(1+β)+2(1+β)2∫𝔻∖(1−η)𝔻|ΨN(z)|2(1−|z|2)dm2                                            
+       │(z)\displaystyle\leq\beta+2\beta(1+\beta)+2(1+\beta)^{2}\int_{\mathbb{D}\setminus(1-\eta)\
+       │mathbb{D}}|\Psi_{N}(z)|^{2}(1-|z|^{2})\,dm_{2}(z)                                         
+───────┼──────────────────────────────────────────────────────────────────────────────────────────
+       │+2(1+β)2β∫𝔻∖(1−η)                                                                         
+       │𝔻C02∥f∥H∞2(1−|z|2)log2e1−|z|dm2(z)\displaystyle\qquad\quad+\frac{2(1+\beta)^{2}}{\beta}\in
+       │t_{\mathbb{D}\setminus(1-\eta)\mathbb{D}}C^{2}_{0}\|f\|^{2}_{H^{\infty}}(1-|z|^{2})\log^{2
+       │}\frac{e}{1-|z|}\,dm_{2}(z)                                                               
+───────┼──────────────────────────────────────────────────────────────────────────────────────────
+       │≤(5+C1⋅C02‖f‖H∞2)β+2(1+β)2π26≤π23+ε,\displaystyle\leq(5+C_{1}\cdot                        
+       │C^{2}_{0}\|f\|^{2}_{H^{\infty}})\beta+2(1+\beta)^{2}\frac{\pi^{2}}{6}\leq\frac{\pi^{2}}{3}
+       │+\varepsilon,                                                                             
+───────┴──────────────────────────────────────────────────────────────────────────────────────────
+
+for sufficiently small β\beta. ∎
+
+## References
+*  J. Andersson, On some power sum problems of Montgomery and Turán, Int. Math. Res. Not. (2008),
+  Art. ID rnn015.
+*  J. M. Anderson, V. Ya. Eiderman, Cauchy transforms of point masses: The logarithmic derivative
+  of polynomials, Annals of Math. 163 (2006), 1057–1076.
+*  N. K. Bary, A treatise on trigonometric series. I, Pergamon Press, Oxford, NY, 1964.
+*  P. A. Borodin, Approximation by simple partial fractions with constraints on the poles. II,
+  Sb. Math. 207 (2016), no. 3-4, 331–341.
+*  J. W. S. Cassels, On the sums of powers of complex numbers, Acta Math. Acad. Sci. Hungar. 7
+  (1956), 283–289.
+*  C. K. Chui, Bounded approximation by polynomials whose zeros lie on a circle, Trans. Amer.
+  Math. Soc. 138 (1969), 171–182.
+*  C. K. Chui, A lower bound of fields due to unit point masses, Amer. Math. Monthly 78 (1971),
+  no. 7, 779–780.
+*  C. K. Chui, On approximation in the Bers spaces, Proc. Amer. Math. Soc. 40 (1973), no. 2,
+  438–442.
+*  C. K. Chui, X. C. Shen, Order of approximation by electrostatic fields due to electrons,
+  Constr. Approx. 1 (1985), no. 2, 121–135.
+*  P. V. Chunaev, V. I. Danchenko, M. A. Komarov, Extremal and approximative properties of
+  simple partial fractions, Russian Math. (Iz. VUZ) 62 (2018), no. 12, 6–41.
+*  P. Erdös, A. Rényi, A probabilistic approach to problems of Diophantine approximation,
+  Illinois J. Math. 1 (1957), 303–315.
+*  H. Hedenmalm, B. Korenblum, K. Zhu, Theory of Bergman spaces, Graduate texts in mathematics,
+  vol. 199, Springer–Verlag, New York, 2000.
+*  J. Korevaar, Asymptotically neutral distributions of electrons and polynomial approximation,
+  Annals of Math. 80 (1964), no. 3, 403–410.
+*  G. R. Mac Lane, Polynomials with zeros on a rectifiable Jordan curve, Duke Math. J. 16
+  (1949), 461–477.
+*  D. J. Newman, A lower bound for an area integral, Amer. Math. Monthly 79 (1972), no. 9,
+  1015–1016.
+*  Z. Rubinstein, E. B. Saff, Bounded approximation by polynomials whose zeros lie on a circle,
+  Proc. Amer. Math. Soc. 29 (1971), 482–486.
+*  M. Thompson, Approximation of bounded analytic functions on the disc, Nieuw Arch. Wisk. (3)
+  159 (1967), 49–54.
+
+Experimental support, please [view the build logs] for errors. Generated by [ L A T E xml
+[[LOGO]] ].
+
+## Instructions for reporting errors
+
+We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility
+and mobile support. To report errors in the HTML that will help us improve conversion and rendering,
+choose any of the methods listed below:
+* Click the "Report Issue" () button, located in the page header.
+
+**Tip:** You can select the relevant text first, to include it in your report.
+
+Our team has already identified [the following issues]. We appreciate your time reviewing and
+reporting rendering errors we may not have found yet. Your efforts will help us improve the HTML
+versions for all readers, because disability should not be a barrier to accessing research. Thank
+you for your continued support in championing open access for all.
+
+Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML
+maintain a [list of packages that need conversion], and welcome [developer contributions].
+
+We gratefully acknowledge support from our **major funders**, [**member institutions**], ****,
+and all contributors.
+[About] · [Help] · [Contact] · [Subscribe] · [Copyright] · [Privacy] ·
+[Accessibility] · [Operational Status (opens in new tab)]
+Major funding support from
+[ [Simons Foundation] ] [ [Simons Foundation International] ] [ [Schmidt Sciences] ]
+
+: https://info.arxiv.org/about
+: /
+: https://info.arxiv.org/about/accessible_HTML.html
+: #
+: /abs/2009.01898v1
+: /pdf/2009.01898v1
+: #abstract1
+: #S1
+: #S2
+: #S3
+: #S4
+: #S5
+: #S6
+: #bib
+: https://info.arxiv.org/help/license/index.html#licenses-available
+: #bib.bib7
+: #bib.bib2
+: #bib.bib10
+: #bib.bib14
+: #bib.bib17
+: #bib.bib6
+: #bib.bib16
+: #bib.bib13
+: #bib.bib4
+: #bib.bib7
+: #bib.bib7
+: #bib.bib15
+: #bib.bib8
+: #S1.E1
+: #bib.bib8
+: #bib.bib8
+: #bib.bib9
+: #bib.bib12
+: #S2.E1
+: #S2.E1
+: #S2.E1
+: #bib.bib17
+: #bib.bib14
+: #Thmtheorem7
+: #Thmtheorem8
+: #Thmtheorem9
+: #Thmtheorem10
+: #Thmtheorem9
+: #Thmtheorem10
+: #Thmtheorem9
+: #Thmtheorem10
+: #Thmtheorem9
+: #Thmtheorem10
+: #Thmtheorem9
+: #Thmtheorem1
+: #Thmtheorem1
+: #Thmtheorem3
+: #Thmtheorem6
+: #Thmtheorem4
+: #S4
+: #Thmtheorem1
+: #S3
+: #Thmtheorem3
+: #Thmtheorem4
+: #Thmtheorem6
+: #S5
+: #Thmtheorem9
+: #Thmtheorem10
+: #bib.bib14
+: #bib.bib17
+: #Thmtheorem7
+: #Thmtheorem8
+: #S6
+: #Thmtheorem10
+: #Thmtheorem15
+: #Thmtheorem1
+: #S2.E1
+: #Thmtheorem1
+: #bib.bib3
+: #Thmtheorem1
+: #S3.E1
+: #S3.E2
+: #S3.E2
+: #S3.E3
+: #S3.E4
+: #S3.E5
+: #Thmtheorem1
+: #Thmtheorem3
+: #Thmtheorem6
+: #Thmtheorem4
+: #Thmtheorem1
+: #Thmtheorem12
+: #Thmtheorem13
+: #Thmtheorem3
+: #Thmtheorem4
+: #Thmtheorem3
+: #Thmtheorem6
+: #Thmtheorem3
+: #S4.E1
+: #bib.bib11
+: #bib.bib1
+: #S4.E2
+: #bib.bib5
+: #Thmtheorem9
+: #Thmtheorem10
+: #Thmtheorem9
+: #S5.E1
+: #Thmtheorem10
+: #Thmtheorem9
+: #Thmtheorem9
+: #S2.E2
+: #S5.E2
+: #S5.E2
+: #S5.E3
+: #Thmtheorem7
+: #Thmtheorem8
+: #Thmtheorem7
+: #S6.E1
+: #S6.E2
+: #S6.E3
+: #Thmtheorem1
+: #Thmtheorem3
+: #S6.E1
+: #Thmtheorem10
+: #Thmtheorem5
+: #bib.bib13
+: #Thmtheorem8
+: #S6.E1
+: #Thmtheorem10
+: ./2009.01898v1/__stdout.txt
+: https://math.nist.gov/~BMiller/LaTeXML/
+: https://github.com/arXiv/html_feedback/issues
+: https://github.com/brucemiller/LaTeXML/wiki/Porting-LaTeX-packages-for-LaTeXML
+: https://github.com/brucemiller/LaTeXML/issues
+: https://info.arxiv.org/about/ourmembers.html
+: https://info.arxiv.org/about
+: https://info.arxiv.org/help
+: https://info.arxiv.org/help/contact.html
+: https://info.arxiv.org/help/subscribe
+: https://info.arxiv.org/help/license/index.html
+: https://info.arxiv.org/help/policies/privacy_policy.html
+: https://info.arxiv.org/help/web_accessibility.html
+: https://status.arxiv.org
+: https://www.simonsfoundation.org/
+: https://www.sfi.org.bm/
+: https://www.schmidtsciences.org/
