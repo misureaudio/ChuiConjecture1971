@@ -1,6 +1,6 @@
 # Numerical Testing of Chui Conj
 
-- **Source:** https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221DEKPeimnJQf-DE0babP38YP9b20m_2wH%22%5D,%22action%22:%22open%22,%22userId%22:%22107891546885036243700%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing
+- **Source:** ---------
 - **Extracted:** 2026-08-30 14:02
 - **Messages:** 102
 - **Attachments:** 5/5
